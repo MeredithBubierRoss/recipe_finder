@@ -45,5 +45,5 @@ feature "new user signs up for account" do
     click_button "Sign up"
 
     expect(page).to have_content "Email has already been taken"
-    end
+  end
 end

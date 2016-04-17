@@ -5,7 +5,7 @@ require 'rails_helper'
 # So I can browse for something that sounds delicious.
 #
 # [X] Unauthenticated user visits index, sees list of all recipes
-# [] Authenticated user also sees link to favorites
+# [X] Authenticated user also sees link to favorites
 # [X] User clicks recipe name and is taken to recipe show page
 
 feature "user goes to list of available recipes" do
@@ -34,5 +34,15 @@ feature "user goes to list of available recipes" do
     click_on "Pasta and Sauce"
 
     expect(page).to have_content pasta_sauce.instructions
+  end
+
+  scenario "authenticated user sees shortcut to favorited recipes" do
+    @user = FactoryGirl.create(:user)
+
+    login_as(@user)
+
+    visit root_path
+
+    expect(page).to have_link "Favorites"
   end
 end

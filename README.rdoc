@@ -1,31 +1,31 @@
 == README
 ![Build Status](https://codeship.com/projects/86385b50-e668-0133-16eb-06b21bf3bd66/status?branch=master)
-![Code Climate](https://codeclimate.com/github/meredithbubierross/recipe_finder.png)
-![Coverage Status](https://coveralls.io/repos/meredithbubierross/recipe_finder/badge.png)
+![Code Climate](https://codeclimate.com/github/MeredithBubierRoss/recipe_finder.png)
+![Coverage Status](https://coveralls.io/repos/MeredithBubierRoss/recipe_finder/badge.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This app lets a user search for recipes by ingredient, prep time, or both.
+If they are an authenticated user, they can also save favorite recipes so they
+can come back to them later.
 
 * Ruby version
+Ruby 2.2.3
 
 * System dependencies
+This is a Ruby on Rails app, using Devise for user authentication.
 
 * Configuration
+$bundle
 
 * Database creation
+$rake db:create
 
 * Database initialization
+$rake db:migrate
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+Tests are run through RSpec/Capybara. The gems will be loaded when the app is bundled.
+Running $rake will start up test suite.
 
 * Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This app is hosted on Heroku.
+http://suppertime.herokuapp.com

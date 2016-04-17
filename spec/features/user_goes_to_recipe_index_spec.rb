@@ -17,9 +17,9 @@ feature "user goes to list of available recipes" do
     visit root_path
 
     expect(page).to have_content "Recipes"
-    expect(page).to have_content "Ziti"
-    expect(page).to have_content "Risotto"
-    expect(page).to have_content "Sticky"
+    expect(page).to have_content chicken_ziti.name
+    expect(page).to have_content pepper_risotto.name
+    expect(page).to have_content sticky_lemon.name
 
   end
 

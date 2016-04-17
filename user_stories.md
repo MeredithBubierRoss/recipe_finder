@@ -21,9 +21,9 @@ As a user
 I want to see a list of all recipes
 So I can browse for something that sounds delicious.
 
-[] Unauthenticated user visits index, sees list of all recipes
-[] Authenticated user also sees link to favorites
-[] User clicks recipe name and is taken to recipe show page
+[X] Unauthenticated user visits index, sees list of all recipes
+[X] Authenticated user also sees link to favorites
+[X] User clicks recipe name and is taken to recipe show page
 
 
 As a user

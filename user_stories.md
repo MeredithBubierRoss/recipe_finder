@@ -2,9 +2,9 @@ As a user
 I want to be able to create an account
 So I can save the recipes I enjoy.
 
-[] User goes to index, clicks link to sign up
-[] User creates a new account
-[] User fills out form incorrectly, sees prompt to refill/resubmit
+[X] User goes to index, clicks link to sign up
+[X] User creates a new account
+[X] User fills out form incorrectly, sees prompt to refill/resubmit
 
 
 As a user

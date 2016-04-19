@@ -4,6 +4,9 @@
   <%= link_to 'Favorites' %>
 <% end %>
 <br><br>
-<% @recipes.each do |recipe| %>
-  <li><%= link_to recipe.name, recipe %></li>
-<% end %>
+
+<ul>
+  <% @recipes.each do |recipe| %>
+    <li><%= link_to recipe.name, recipe %></li>
+  <% end %>
+</ul>

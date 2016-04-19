@@ -11,10 +11,10 @@ As a user
 I want to sign into my account
 So I can save recipes to make again.
 
-[] Authenticated user goes to index, clicks link to sign in
-[] User signs into account and is taken to index
-[] Unauthenticated user is prompted to sign up
-[] User fills out form incorrectly, sees prompt to refill/resubmit
+[X] Authenticated user goes to index, clicks link to sign in
+[X] User signs into account and is taken to index
+[X] Unauthenticated user is prompted to sign up
+[X] User fills out form incorrectly, sees prompt to refill/resubmit
 
 
 As a user

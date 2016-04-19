@@ -14,6 +14,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'foundation-rails'
 gem 'coveralls', require: false
 gem 'devise'
+gem 'dotenv-rails'
+gem 'yummly'
+gem 'httparty'
 
 group :development, :test do
   gem 'byebug'

@@ -1,0 +1,7 @@
+<%= form_tag({controller: 'ingredients', action: 'index'}, {method: :get}) do %>
+  <%= text_field_tag 'search' %>
+<% end %>
+
+<% @recipe_names.each do |recipe| %>
+  <li><%= recipe %></li>
+<% end %>

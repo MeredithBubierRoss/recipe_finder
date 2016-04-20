@@ -1,7 +1,9 @@
 <%= form_tag({controller: 'ingredients', action: 'index'}, {method: :get}) do %>
-  <%= text_field_tag 'search' %>
+  <%= text_field_tag :query %>
 <% end %>
 
-<% @recipe_names.each do |recipe| %>
-  <li><%= recipe %></li>
+<% @results.each do |recipe| %>
+  <li><%= link_to recipe.name, "/ingredients/#{recipe.id}" %></li>
 <% end %>
+
+Recipe search powered by <a href='http://www.yummly.com/recipes'><img alt='Yummly' src='http://static.yummly.com/api-logo.png'/></a>

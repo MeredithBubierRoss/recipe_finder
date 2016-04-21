@@ -17,6 +17,7 @@ gem 'devise'
 gem 'dotenv-rails'
 gem 'yummly'
 gem 'httparty'
+gem 'vcr', '~> 3.0'
 
 group :development, :test do
   gem 'byebug'
@@ -27,6 +28,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
+  gem 'webmock'
 end
 
 group :development do

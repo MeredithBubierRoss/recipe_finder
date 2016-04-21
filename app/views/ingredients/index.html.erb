@@ -1,5 +1,6 @@
 <%= form_tag({controller: 'ingredients', action: 'index'}, {method: :get}) do %>
   <%= text_field_tag :query %>
+  <%= submit_tag "Search", name: "Search" %>
 <% end %>
 
 <% @results.each do |recipe| %>

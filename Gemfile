@@ -17,6 +17,11 @@ gem 'devise'
 gem 'dotenv-rails'
 gem 'yummly'
 gem 'httparty'
+gem 'vcr', '~> 3.0'
+
+group :test do
+  gem 'webmock'
+end
 
 group :development, :test do
   gem 'byebug'

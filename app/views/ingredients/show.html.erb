@@ -1,1 +1,13 @@
-<li> <%= @recipe.recipeName %> </li>
+<h1><%= @recipe.name %></h1>
+
+<ul>
+  <% list = @recipe.ingredients %>
+  <% list.each do |ingredient| %>
+    <li><%= ingredient %></li>
+  <% end %>
+</ul>
+
+Like what you see? Get more info here:<br />
+<h3><%= link_to @recipe.name, @recipe.attribution.url %></br></h3>
+<%= @recipe.attribution.text %><br>
+<img src="http://static.yummly.com/api-logo.png"></img>

@@ -2,148 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yummly.com/v1/api/recipes?_app_id=<YUMMLY_APP_ID>&_app_key=<YUMMLY_APP_KEY>&q
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Thu, 21 Apr 2016 00:44:35 GMT
-      Server:
-      - nginx
-      X-Yummly-Request-Id:
-      - a0873877-3be1-449b-b79b-f69eb78c9132
-      Content-Length:
-      - '3168'
-      Connection:
-      - keep-alive
-    body:
-      encoding: ASCII-8BIT
-      string: '{"criteria":{"q":"","allowedIngredient":null,"excludedIngredient":null},"matches":[{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/577pVdud33b4EopiSMyqWUB25KBM7KVnXtL_B7jlLxzEmUeLPZNctNN1vhgLtBtf_8qQBVCamNfR6BiiHbdc=s90-c"},"sourceDisplayName":"She
-        Wears Many Hats","ingredients":["almond butter","butter","powdered sugar","vanilla
-        extract","semisweet chocolate","white chocolate"],"id":"Chocolate-Almond-Butter-Easter-Eggs-1533208","smallImageUrls":["https://lh3.googleusercontent.com/LmPkfy-mX0fJ5BvQIJ4hMhyZcf1dqoK8RAHhIoiS0rfdeT_xXSSWhB5Cat5x6zDtQ8s12SIvismqBgsWdeR96A=s90"],"recipeName":"Chocolate
-        Almond Butter Easter Eggs","totalTimeInSeconds":1800,"attributes":{"course":["Desserts"],"holiday":["Easter"]},"flavors":{"piquant":0.0,"meaty":0.8333333333333334,"bitter":0.8333333333333334,"sweet":0.8333333333333334,"sour":0.16666666666666666,"salty":0.16666666666666666},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/UQqAK_Fve8oG3tl_1Fsz4mCmtF305-ckHhYeUlxMlP6774x3PwwRU4_tAbNICfjzjauHtHLIQFh7MWf5eqlA=s90-c"},"sourceDisplayName":"Life
-        in the Lofthouse","ingredients":["unsweetened applesauce","granulated sugar","large
-        eggs","all-purpose flour","baking soda","baking powder","salt","cinnamon","carrots","butter","cream
-        cheese","almond extract","powdered sugar"],"id":"Carrot-Sheet-Cake-1554020","smallImageUrls":["https://lh3.googleusercontent.com/0L3rsgtJrE_pHFWLOFjPPrk4Rx2xrBq7q6LN9oBNBX4opRqbvOqgHzkvRTrq0OHXMGT9TZHRhF2QnD-nAQ_Jag=s90"],"recipeName":"Carrot
-        Sheet Cake","totalTimeInSeconds":2400,"attributes":{"course":["Desserts"]},"flavors":{"piquant":0.0,"meaty":0.16666666666666666,"bitter":0.16666666666666666,"sweet":0.8333333333333334,"sour":0.16666666666666666,"salty":0.5},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/ygWK1wdC-bjovw_aeLdcDHk879QwhUerQ9NMTCM_z8sJgrl1XoCXL_lz_39Btjg4mY2VnypHLXtf3uWF2_1Dig=s90-c"},"sourceDisplayName":"Sweet
-        Somethings","ingredients":["bone-in skin-on chicken thighs","baby potatoes","baby
-        carrots","olive oil","salt","pepper"],"id":"Quick-and-Easy-4-Ingredient-Dinner-1558225","smallImageUrls":["https://lh3.googleusercontent.com/DbHQBf0uR1OQkJlF_s1D7E04lip5HOf3k_Gzs6TdFt5WZ96qUWhsghCcE5fTDjUC1odvrHmP4GwgGkxrQRM8NQ=s90"],"recipeName":"Quick
-        and Easy 4 Ingredient Dinner","totalTimeInSeconds":4500,"attributes":{"course":["Main
-        Dishes"]},"flavors":{"piquant":0.0,"meaty":0.5,"bitter":0.16666666666666666,"sweet":0.16666666666666666,"sour":0.5,"salty":0.16666666666666666},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/tylEA4bu23U9c9kCm-W78HRHQAv7rugY4Np3ZJ6201KwmeGyQbUeLwNuTa_18oYOHwVVIJT8pXv2nV9mBFj-=s90-c"},"sourceDisplayName":"Chocolate
-        Slopes","ingredients":["chicken breasts","taco seasoning","plain greek yogurt","black
-        beans","salsa","Mexican cheese blend","tortilla chips"],"id":"Cheesy-Mexican-Chicken-Casserole-1558719","smallImageUrls":["https://lh3.googleusercontent.com/bG7fU2rMxZGIi8sD9uPy3MIJxCW25T3-ZbQlNbumxO8tias-sySBB0izTqGnGixeYYR03b3pKot6jmlSyNPOaeM=s90"],"recipeName":"Cheesy
-        Mexican Chicken Casserole","totalTimeInSeconds":1800,"attributes":{"course":["Main
-        Dishes"],"cuisine":["Kid-Friendly"]},"flavors":null,"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/wo6B0Rc2Ilkpgo0NZEqFdA-aryXiriQeLXY2XWYg4MdbVdImhyrL43b7pLY0qeHSCWKqV3iCCmYP6uYMwzKGjxo=s90-c"},"sourceDisplayName":"Confessions
-        of a Cookbook Queen","ingredients":["brownie mix","eggs","light corn syrup","salted
-        butter","heavy cream","powdered sugar","vanilla extract","frosting","unsweetened
-        cocoa powder","whole milk"],"id":"Cadbury-Egg-Brownies-1541908","smallImageUrls":["https://lh3.googleusercontent.com/cCjaXaGGdZJbkmSogFHKbbQ3gNhimNEiiFutsg_TTmO_ovNzj0yAUXfIcQSQWobZJLfWJZ0fVlcCe-QKO4Gobw=s90"],"recipeName":"Cadbury
-        Egg Brownies","totalTimeInSeconds":4500,"attributes":{"course":["Desserts"]},"flavors":{"piquant":0.0,"meaty":0.16666666666666666,"bitter":0.16666666666666666,"sweet":0.8333333333333334,"sour":0.16666666666666666,"salty":0.16666666666666666},"rating":4},{"imageUrlsBySize":{"90":"http://lh3.googleusercontent.com/U5ZfjzgqoqCf70Mb0gSQOlnsybNeH2OxMGFRM3sfigolRwceCYdnQkZtiUTeooWM7uJS_QW3kw2xV_Y3LxQYgQ=s90-c"},"sourceDisplayName":"Young
-        and Raw","ingredients":["collard leaves","pea shoots","red cabbage","quinoa","hummus","guacamole"],"id":"Quinoa-and-Hummus-Stuffed-Wraps-1519041","smallImageUrls":["http://lh3.googleusercontent.com/EAntFKenlrMemi-A9GA3qhTkvjjX7AOl7GawUOK2HUnUBlf6gvKruSTbOk7SEu_FqkS1yd-kabz9uiOee9UJWWE=s90"],"recipeName":"Quinoa
-        and Hummus Stuffed Wraps","totalTimeInSeconds":1200,"attributes":{"course":["Lunch
-        and Snacks"]},"flavors":null,"rating":3},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/8Ae1wnmkB9GRU2-oIJ5fMDNcwE4VLnGornoxbxlNarypbNA4wQxCgub2q4CY8W7MWsmJMrP69fd7s3c4gL3Y=s90-c"},"sourceDisplayName":"Wishes
-        and Dishes","ingredients":["sweetened condensed milk","large egg whites","vanilla","salt","sweetened
-        coconut","Nutella","M&M''s Candy"],"id":"Coconut-Macaroon-Nutella-Nests-1523951","smallImageUrls":["https://lh3.googleusercontent.com/xhew51fYFGXXb7HgEb7_LnSGhhfIuVanz-iLX4AeyZqv3TWq83Qc2ljc7Q2R53b3ytHmJR6moQ3WawsAVA92c7w=s90"],"recipeName":"Coconut
-        Macaroon Nutella Nests","totalTimeInSeconds":2400,"attributes":{"course":["Desserts"]},"flavors":null,"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/L6BYGTYxtMiykJS0_sVUrWVnAsy10wDvIaetbN2BqomAKtpjot4CxBSvYnKzld7LZC-5w6aMYdzyYsiwPW4i=s90-c"},"sourceDisplayName":"Add
-        a Pinch","ingredients":["salmon fillets","garlic","chopped parsley","parmesan
-        cheese"],"id":"Baked-Salmon-with-Parmesan-Herb-Crust-1545516","smallImageUrls":["https://lh3.googleusercontent.com/EBBbr2u57wbpkzv_P6nw1-cQ3Ey1k2xYFqPn1WbqlwKoi5sGtDcG4VamvCa5rOHfvXnyq-6k_4mP3vIdwc9tIg=s90"],"recipeName":"Baked
-        Salmon with Parmesan Herb Crust","totalTimeInSeconds":1020,"attributes":{"course":["Main
-        Dishes"]},"flavors":{"piquant":0.0,"meaty":0.8333333333333334,"bitter":0.8333333333333334,"sweet":0.16666666666666666,"sour":0.8333333333333334,"salty":0.8333333333333334},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/dhzctvuM3dllA-4zUTOIyAiQ1lVYXiPcKaIUdDY1csFWo8pHFgdV8b1qQF6T3ZgVOlDWUhTziw45_F8rbm4B0w=s90-c"},"sourceDisplayName":"Mommyhood''s
-        Diary","ingredients":["extra-virgin olive oil","pure maple syrup","apple cider
-        vinegar","grated lemon zest","lemon juice","kosher salt","black pepper"],"id":"Maple-Vinaigrette-1557522","smallImageUrls":["https://lh3.googleusercontent.com/rA4u3Ec9fSFnegQBY8UH6xBEZ0StVdfHIG0mcfWPy8PCoviPr2tySlZa3fD_C9UPQ4TjcGroWS7tOb_tqlu6PA=s90"],"recipeName":"Maple
-        Vinaigrette","totalTimeInSeconds":180,"attributes":{"course":["Salads"]},"flavors":{"piquant":0.0,"meaty":0.6666666666666666,"bitter":0.16666666666666666,"sweet":0.8333333333333334,"sour":0.5,"salty":0.8333333333333334},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/rs6Zh3JRBsHP5hmy_4oYz9ssTOW2C7w4kS4j8aAI47ieozT2MzRyhVItBZEvO_beBaL87iFksewCvYCvQCDpgA=s90-c"},"sourceDisplayName":"Bake
-        Eat Repeat","ingredients":["warm water","instant yeast","granulated sugar","canola
-        oil","kosher salt","all-purpose flour"],"id":"The-Best-Dinner-Rolls-1558900","smallImageUrls":["https://lh3.googleusercontent.com/UdZ9xCpWv_m_FqyqvwnsQxf4jMva-03gtFz3yFEYvP_am-LSubw-0Kk1XrLBPi-Xw8ZKeNjSS2I36-iVShSBbQ=s90"],"recipeName":"The
-        Best Dinner Rolls","totalTimeInSeconds":8040,"attributes":{"course":["Breads"]},"flavors":{"piquant":0.0,"meaty":0.16666666666666666,"bitter":0.16666666666666666,"sweet":0.16666666666666666,"sour":0.16666666666666666,"salty":0.5},"rating":4}],"facetCounts":{},"totalMatchCount":1475081,"attribution":{"html":"Recipe
-        search powered by <a href=''http://www.yummly.com/recipes''><img alt=''Yummly''
-        src=''http://static.yummly.com/api-logo.png''/></a>","url":"http://www.yummly.com/recipes/","text":"Recipe
-        search powered by Yummly","logo":"http://static.yummly.com/api-logo.png"}}'
-    http_version: 
-  recorded_at: Thu, 21 Apr 2016 00:44:35 GMT
-- request:
-    method: get
-    uri: https://api.yummly.com/v1/api/recipes?_app_id=<YUMMLY_APP_ID>&_app_key=<YUMMLY_APP_KEY>&q=shrimp
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Thu, 21 Apr 2016 13:00:27 GMT
-      Server:
-      - nginx
-      X-Yummly-Request-Id:
-      - 96669b42-95f2-4d97-b2ae-373cdb9a7ccc
-      Content-Length:
-      - '2846'
-      Connection:
-      - keep-alive
-    body:
-      encoding: ASCII-8BIT
-      string: '{"criteria":{"q":"shrimp","allowedIngredient":null,"excludedIngredient":null},"matches":[{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/bAj0NxV80eLylJc4mzduNL2h3ixlrbyqutQVvCBOHN9HUeSMz2b4ySf8tZnrW7m_f-Ex0BiPtxmgQJUOyHpE=s90-c"},"sourceDisplayName":"My
-        Mother''s Daughter","ingredients":["jumbo shrimp","butter","worcestershire
-        sauce","garlic","hot sauce","kosher salt"],"id":"Bbq-Shrimp-1509869","smallImageUrls":["https://lh3.googleusercontent.com/inhavgeaKQa6va8SieP5f1RX5ugiXeRffqtd_I1GuQgy0jDw87H2AyCjsAkPfPlUdCgvLvhOkEp--5EgaWQ0=s90"],"recipeName":"Bbq
-        Shrimp","totalTimeInSeconds":2400,"attributes":{},"flavors":{"sweet":0.16666666666666666,"piquant":0.8333333333333334,"sour":0.3333333333333333,"salty":0.8333333333333334,"meaty":0.8333333333333334,"bitter":0.3333333333333333},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/as4tz4e-tWCZg4lP7XIPe3F2Q9X3GgjGq31Qe_2P-h8wb6i4CDkM63kKR1aPBrT4JgqDEsTCOvdBtHohuujqkQ=s90-c"},"sourceDisplayName":"Fake
-        Ginger","ingredients":["medium shrimp","mayonnaise","garlic chili sauce","granulated
-        sugar","rice vinegar","eggs","milk","all-purpose flour","panko breadcrumbs","salt","ground
-        black pepper","onion powder","garlic powder","dried basil","vegetable oil"],"id":"Bang-Bang-Shrimp-1518117","smallImageUrls":["https://lh3.googleusercontent.com/yJWg8zcSET_hvI7L2e3FbYJTzmhMYw0LdjKPGeFBPl7J-binL6ch651egamdXz4TlETgeQYA_mdqqbT5SyIWuw=s90"],"recipeName":"Bang
-        Bang Shrimp","totalTimeInSeconds":2400,"attributes":{"course":["Appetizers","Main
-        Dishes"]},"flavors":null,"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/jtrHD2dNeP67JRThVVFPi7geL7zti3-3rKq_Qyr5OQ3Gszx20G29OY_evN7Su6ebeG7cUDvqjVTdlqrXeInM=s90-c"},"sourceDisplayName":"HRecipes.com","ingredients":["shrimp","plain
-        greek yogurt","green onions","sweet chili sauce","Sriracha"],"id":"Skinny-Bang-Bang-Shrimp-1538635","smallImageUrls":["https://lh3.googleusercontent.com/vPOUHpwXQYOFuy3Vb4tn-a0pCfPMviTPQNLY1bzBo_4oxuQqw3PFUw8I7RiGjRFj_BFs7VAWnA51Zhmqf5Jl=s90"],"recipeName":"Skinny
-        Bang Bang Shrimp","totalTimeInSeconds":null,"attributes":{},"flavors":{"piquant":0.5,"meaty":0.5,"bitter":0.3333333333333333,"sweet":0.16666666666666666,"sour":0.16666666666666666,"salty":0.3333333333333333},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/TxGgR2F2joBcEOrenTA9rWTgNzZWSDEiGWg9awhB2mNc4ZciM-WSAuMiIhxWs-Oovs_ciFZW5ygNz-xB_f8R=s90-c"},"sourceDisplayName":"Cooking
-        LSL","ingredients":["baguette","olive oil","shrimp","salt","black pepper","paprika","garlic
-        powder","cayenne pepper","lemon","avocado","lime","pepper","garlic cloves","parsley"],"id":"Avocado-And-Shrimp-Crostini-1491146","smallImageUrls":["https://lh3.googleusercontent.com/bfdvF1NF-DqsHe7_Ea-u1mfm1LZKU_h_iZnjWf3_ErxzwzQKhUI-9MMMvjmT5E2dfCY8JEk6bCotpU9RSk9IVkY=s90"],"recipeName":"Avocado
-        And Shrimp Crostini","totalTimeInSeconds":1500,"attributes":{"course":["Appetizers"]},"flavors":{"piquant":0.5,"meaty":0.6666666666666666,"bitter":0.6666666666666666,"sweet":0.16666666666666666,"sour":0.6666666666666666,"salty":0.6666666666666666},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/uO1Obif7A3PdLFEk0IJu3AEYnNu7-cVwgO6CFjbofVBNLaWV8oLqWDnQd7jt6udh5nEEmwz6JJu8oHXcEg2ZoV8=s90-c"},"sourceDisplayName":"Adventures
-        in Cooking","ingredients":["extra-virgin olive oil","garlic cloves","jumbo
-        shrimp","sea salt flakes","freshly ground black pepper","smoked paprika","cayenne
-        pepper"],"id":"Garlic-Shrimp-1518720","smallImageUrls":["https://lh3.googleusercontent.com/B5hhK-f6lJM-Zkyb-i4HxUkwh4xTPaucy1Vl5Or6hoYcUX5V54peccLg2fJ1-E9SIR2CNJrEb3LTlU618BtpDg=s90"],"recipeName":"Garlic
-        Shrimp","totalTimeInSeconds":1200,"attributes":{"course":["Appetizers","Main
-        Dishes"]},"flavors":{"piquant":0.5,"meaty":0.8333333333333334,"bitter":0.6666666666666666,"sweet":0.0,"sour":0.16666666666666666,"salty":0.8333333333333334},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/FIXv9WSurIpLaxJjGLpGYs-X6tOx3uPikabWsMkcPFo_OnC2hKkkYE8Xg91heugRDQp31uBJtRzUCbi1mp79Gw=s90-c"},"sourceDisplayName":"Passion
-        For Savings","ingredients":["mayonnaise","sweet chili sauce","hot sauce","shrimp","lettuce","scallions","cookies"],"id":"Firecracker-Shrimp-1558837","smallImageUrls":["https://lh3.googleusercontent.com/Rr5VHy4qsMz3XvS-8tAvk-tXdirTButkTd43dJAN0c2Ft82X_DuTnthZZqGwYIbX96QoftyZAwtfPxIOVIctxQ=s90"],"recipeName":"Firecracker
-        Shrimp","totalTimeInSeconds":1800,"attributes":{},"flavors":null,"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/2AuFDf3qTdw7lGCeajcGFw9j9SN08JqfHITV3yV89fL8mTDa9jaFDfQtlyDDuj_PwQBdv9y2UrZQXNEMgq_c=s90-c"},"sourceDisplayName":"The
-        Pioneer Woman","ingredients":["shrimp","hot chili sauce","olive oil","salt","sugar","garlic"],"id":"Firecracker-Shrimp-1527094","smallImageUrls":["https://lh3.googleusercontent.com/XtbXqDO6X_DolNEHlwp25Ctw3VsZUZpKxOdq0-owXiaFhbf_U-ecs9P6tsNYI9du6jNIbpnsbHB_KnoM5kzDHw=s90"],"recipeName":"Firecracker
-        Shrimp","totalTimeInSeconds":2400,"attributes":{"course":["Main Dishes"],"cuisine":["Barbecue"]},"flavors":null,"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/XzBfqOawpId6jI_XyONu5wywLRqH410lot3O1EXlMD_s1lZLg8KYjn5IHvhVmQqYwjTnDfHhE-sYVWDBq71WEQ=s90-c"},"sourceDisplayName":"Jay''s
-        Baking Me Crazy","ingredients":["extra-virgin olive oil","garlic cloves","jumbo
-        shrimp","sea salt","freshly ground pepper","smoked paprika","cayenne pepper"],"id":"Garlicky-Shrimp-1595605","smallImageUrls":["https://lh3.googleusercontent.com/9UUoZSjqvNvTUEa5CZmzkXW3z3lDGuZ32bDEydU6LvtZC9vPYV0XN-LbZYK81XzPIneXUcVBtoR5PjklgAjjfhY=s90"],"recipeName":"Garlicky
-        Shrimp","totalTimeInSeconds":900,"attributes":{"course":["Main Dishes"]},"flavors":{"piquant":0.5,"meaty":0.8333333333333334,"bitter":0.6666666666666666,"sweet":0.0,"sour":0.16666666666666666,"salty":0.8333333333333334},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/GsHJvB5Riw0jhwA-jehbm9QpH6Ll9VwU3visQZxPt-a-z2xYyOopFYr2rFlq1xv_g_cBz3BD9gnw_jjb0t6buw=s90-c"},"sourceDisplayName":"Kraft
-        Canada","ingredients":["large shrimp","cajun seasoning","extra-virgin olive
-        oil","garlic","fresh parsley"],"id":"Quick-Creole-Shrimp-1512522","smallImageUrls":["https://lh3.googleusercontent.com/qvG7sqWAtz55amd5GmbPbgysWvtEX3-OHMWeAu2eVCBh8Fba1grPWUIxACXiRXtrgaQ8W7jhXCYnHmfwhMM2xA=s90"],"recipeName":"Quick
-        Creole Shrimp","totalTimeInSeconds":1200,"attributes":{"course":["Main Dishes"]},"flavors":{"piquant":0.6666666666666666,"meaty":0.8333333333333334,"bitter":0.16666666666666666,"sweet":0.16666666666666666,"sour":0.6666666666666666,"salty":0.16666666666666666},"rating":3},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/7dLGBDdHwKN1xvzVUvnXP2gHhJc3wdmafpmxJ41WcKGCQhiZVpawSg9nCBqJSrDb5FRokjgHRPaw1Ho9r-Md=s90-c"},"sourceDisplayName":"Happily
-        Homegrown","ingredients":["shrimp","kosher salt","extra-virgin olive oil","large
-        garlic cloves","flat leaf parsley"],"id":"Sizzling-Garlic-Shrimp-1520954","smallImageUrls":["https://lh3.googleusercontent.com/UDzb9YpBtl-N-J5jsp6kDnW8DmpZH4x7zay-4_4VP_Mu7HhyJ1pjJPhjdqbqKQ3PxRb7GD2006A8jWxr-h68=s90"],"recipeName":"Sizzling
-        Garlic Shrimp","totalTimeInSeconds":1500,"attributes":{"course":["Main Dishes"]},"flavors":{"piquant":0.0,"meaty":0.8333333333333334,"bitter":0.16666666666666666,"sweet":0.0,"sour":0.16666666666666666,"salty":0.3333333333333333},"rating":4}],"facetCounts":{},"totalMatchCount":34150,"attribution":{"html":"Recipe
-        search powered by <a href=''http://www.yummly.com/recipes''><img alt=''Yummly''
-        src=''http://static.yummly.com/api-logo.png''/></a>","url":"http://www.yummly.com/recipes/","text":"Recipe
-        search powered by Yummly","logo":"http://static.yummly.com/api-logo.png"}}'
-    http_version: 
-  recorded_at: Thu, 21 Apr 2016 13:00:28 GMT
-- request:
-    method: get
     uri: https://api.yummly.com/v1/api/recipes?_app_id=1d959495&_app_key=3d5cc22a861f07f9b991e196e9193eec&q
     body:
       encoding: US-ASCII
@@ -163,11 +21,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 21 Apr 2016 13:38:35 GMT
+      - Thu, 21 Apr 2016 16:11:12 GMT
       Server:
       - nginx
       X-Yummly-Request-Id:
-      - 39e7b65b-2e16-4d16-906e-7370cfd8ff0e
+      - a5ea2b7c-af1a-4674-b32d-704db08b8c3d
       Content-Length:
       - '3170'
       Connection:
@@ -209,12 +67,12 @@ http_interactions:
         Vinaigrette","totalTimeInSeconds":180,"attributes":{"course":["Salads"]},"flavors":{"piquant":0.0,"meaty":0.6666666666666666,"bitter":0.16666666666666666,"sweet":0.8333333333333334,"sour":0.5,"salty":0.8333333333333334},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/rs6Zh3JRBsHP5hmy_4oYz9ssTOW2C7w4kS4j8aAI47ieozT2MzRyhVItBZEvO_beBaL87iFksewCvYCvQCDpgA=s90-c"},"sourceDisplayName":"Bake
         Eat Repeat","ingredients":["warm water","instant yeast","granulated sugar","canola
         oil","kosher salt","all-purpose flour"],"id":"The-Best-Dinner-Rolls-1558900","smallImageUrls":["https://lh3.googleusercontent.com/UdZ9xCpWv_m_FqyqvwnsQxf4jMva-03gtFz3yFEYvP_am-LSubw-0Kk1XrLBPi-Xw8ZKeNjSS2I36-iVShSBbQ=s90"],"recipeName":"The
-        Best Dinner Rolls","totalTimeInSeconds":8040,"attributes":{"course":["Breads"]},"flavors":{"piquant":0.0,"meaty":0.16666666666666666,"bitter":0.16666666666666666,"sweet":0.16666666666666666,"sour":0.16666666666666666,"salty":0.5},"rating":4}],"facetCounts":{},"totalMatchCount":1475449,"attribution":{"html":"Recipe
+        Best Dinner Rolls","totalTimeInSeconds":8040,"attributes":{"course":["Breads"]},"flavors":{"piquant":0.0,"meaty":0.16666666666666666,"bitter":0.16666666666666666,"sweet":0.16666666666666666,"sour":0.16666666666666666,"salty":0.5},"rating":4}],"facetCounts":{},"totalMatchCount":1475550,"attribution":{"html":"Recipe
         search powered by <a href=''http://www.yummly.com/recipes''><img alt=''Yummly''
         src=''http://static.yummly.com/api-logo.png''/></a>","url":"http://www.yummly.com/recipes/","text":"Recipe
         search powered by Yummly","logo":"http://static.yummly.com/api-logo.png"}}'
     http_version: 
-  recorded_at: Thu, 21 Apr 2016 13:38:36 GMT
+  recorded_at: Thu, 21 Apr 2016 16:11:12 GMT
 - request:
     method: get
     uri: https://api.yummly.com/v1/api/recipes?_app_id=1d959495&_app_key=3d5cc22a861f07f9b991e196e9193eec&q=shrimp
@@ -236,11 +94,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 21 Apr 2016 13:38:36 GMT
+      - Thu, 21 Apr 2016 16:11:13 GMT
       Server:
       - nginx
       X-Yummly-Request-Id:
-      - af49ecd6-ed83-499c-87a9-3624dff2b93e
+      - a3f25f31-a74c-4e43-b88d-a0543dce994d
       Content-Length:
       - '2846'
       Connection:
@@ -278,10 +136,10 @@ http_interactions:
         Creole Shrimp","totalTimeInSeconds":1200,"attributes":{"course":["Main Dishes"]},"flavors":{"piquant":0.6666666666666666,"meaty":0.8333333333333334,"bitter":0.16666666666666666,"sweet":0.16666666666666666,"sour":0.6666666666666666,"salty":0.16666666666666666},"rating":3},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/7dLGBDdHwKN1xvzVUvnXP2gHhJc3wdmafpmxJ41WcKGCQhiZVpawSg9nCBqJSrDb5FRokjgHRPaw1Ho9r-Md=s90-c"},"sourceDisplayName":"Happily
         Homegrown","ingredients":["shrimp","kosher salt","extra-virgin olive oil","large
         garlic cloves","flat leaf parsley"],"id":"Sizzling-Garlic-Shrimp-1520954","smallImageUrls":["https://lh3.googleusercontent.com/UDzb9YpBtl-N-J5jsp6kDnW8DmpZH4x7zay-4_4VP_Mu7HhyJ1pjJPhjdqbqKQ3PxRb7GD2006A8jWxr-h68=s90"],"recipeName":"Sizzling
-        Garlic Shrimp","totalTimeInSeconds":1500,"attributes":{"course":["Main Dishes"]},"flavors":{"piquant":0.0,"meaty":0.8333333333333334,"bitter":0.16666666666666666,"sweet":0.0,"sour":0.16666666666666666,"salty":0.3333333333333333},"rating":4}],"facetCounts":{},"totalMatchCount":34150,"attribution":{"html":"Recipe
+        Garlic Shrimp","totalTimeInSeconds":1500,"attributes":{"course":["Main Dishes"]},"flavors":{"piquant":0.0,"meaty":0.8333333333333334,"bitter":0.16666666666666666,"sweet":0.0,"sour":0.16666666666666666,"salty":0.3333333333333333},"rating":4}],"facetCounts":{},"totalMatchCount":34158,"attribution":{"html":"Recipe
         search powered by <a href=''http://www.yummly.com/recipes''><img alt=''Yummly''
         src=''http://static.yummly.com/api-logo.png''/></a>","url":"http://www.yummly.com/recipes/","text":"Recipe
         search powered by Yummly","logo":"http://static.yummly.com/api-logo.png"}}'
     http_version: 
-  recorded_at: Thu, 21 Apr 2016 13:38:37 GMT
+  recorded_at: Thu, 21 Apr 2016 16:11:13 GMT
 recorded_with: VCR 3.0.1

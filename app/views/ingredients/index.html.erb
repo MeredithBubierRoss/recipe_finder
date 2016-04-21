@@ -3,8 +3,10 @@
   <%= submit_tag "Search", name: "Search" %>
 <% end %>
 
+Recipe options for <%= @query %>
 <% @results.each do |recipe| %>
   <li><%= link_to recipe.name, "/ingredients/#{recipe.id}" %></li>
 <% end %>
 
+<br />
 Recipe search powered by <a href='http://www.yummly.com/recipes'><img alt='Yummly' src='http://static.yummly.com/api-logo.png'/></a>

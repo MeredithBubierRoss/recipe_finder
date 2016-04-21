@@ -4,9 +4,8 @@ require 'rails_helper'
 # I want to search by ingredient
 # So I can find a recipe that has a component I want to eat in it.
 #
-# [] User enters ingredient, sees list of recipes with ingredient
-# [] User clicks recipe name and is taken to recipe show page
-# [] User fills out form incorrectly, sees prompt to refill/resubmit
+# [X] User enters ingredient, sees list of recipes with ingredient
+# [X] User clicks recipe name and is taken to recipe show page
 
 feature "user searches api recipes by ingredient" do
   scenario "user searches recipes by ingredient", :vcr do

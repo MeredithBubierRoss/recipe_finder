@@ -2,6 +2,14 @@
 
 How can we help you plan your next meal?
 <br />
-<%= link_to "Take me to my personal cookbook!", recipes_path %>
+
+<% if user_signed_in? %>
+  <%= link_to "Take me to my personal cookbook!", recipes_path %>
+<% end %>
+
+<br />
+<% if !user_signed_in? %>
+  <%= link_to "Sign up now", new_user_registration_path %> for a personal cookbook!
+<% end %>
 <br />
 <%= link_to "I want to try something new!", ingredients_path %>

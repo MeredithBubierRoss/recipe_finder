@@ -4,7 +4,7 @@ require 'rails_helper'
 # I want to see a list of all recipes
 # So I can browse for something that sounds delicious.
 #
-# [X] Unauthenticated user visits index, sees list of all recipes
+# [X] Authenticated user visits index, sees list of all recipes
 # [X] Authenticated user also sees link to favorites
 # [X] User clicks recipe name and is taken to recipe show page
 
@@ -13,6 +13,10 @@ feature "user goes to list of available recipes" do
     chicken_ziti = Recipe.create(name: "Chicken Broccoli Ziti")
     pepper_risotto = Recipe.create(name: "Roasted Pepper Risotto")
     sticky_lemon = Recipe.create(name: "Sticky Lemon Chicken")
+
+    @user = FactoryGirl.create(:user)
+
+    login_as(@user)
 
     visit recipes_path
 
@@ -26,6 +30,9 @@ feature "user goes to list of available recipes" do
   scenario "user clicks recipe name and gets recipe details" do
     pasta_sauce = Recipe.create(name: "Pasta and Sauce", instructions: "Boil
     water, cook pasta, and drain. Pour sauce from jar. Enjoy!")
+    @user = FactoryGirl.create(:user)
+
+    login_as(@user)
 
     visit recipes_path
 

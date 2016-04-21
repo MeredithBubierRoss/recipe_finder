@@ -16,9 +16,18 @@ feature "user visits welcome page" do
     expect(page).to have_content "It's Suppertime!"
   end
 
-  scenario "user chooses personal recipes" do
-    visit root_path
+  scenario "unauthenticated user tries to access recipes" do
+    visit recipes_path
 
+    expect(page).to have_content "Log in"
+  end
+
+  scenario "authenticated user chooses personal recipes" do
+    @user = FactoryGirl.create(:user)
+
+    login_as(@user)
+
+    visit root_path
     click_link "personal"
 
     expect(page.current_path).to eq recipes_path

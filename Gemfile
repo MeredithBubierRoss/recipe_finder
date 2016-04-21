@@ -19,6 +19,10 @@ gem 'yummly'
 gem 'httparty'
 gem 'vcr', '~> 3.0'
 
+group :test do
+  gem 'webmock'
+end
+
 group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
@@ -28,7 +32,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
-  gem 'webmock'
 end
 
 group :development do

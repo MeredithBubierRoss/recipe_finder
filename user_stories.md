@@ -30,17 +30,16 @@ As a user
 I want to search by ingredient
 So I can find a recipe that has a component I want to eat in it.
 
-[] User visits index clicks link to search option
-[] User enters ingredient, sees list of recipes with ingredient
-[] User clicks recipe name and is taken to recipe show page
-[] User fills out form incorrectly, sees prompt to refill/resubmit
+[X] User visits root, clicks link to search option
+[X] User enters ingredient, sees list of recipes with ingredient
+[X] User clicks recipe name and is taken to recipe show page
 
 
 As a user
 I want to search by prep time
 So I know when I will be able to have a meal.
 
-[] User visits index, clicks link to search option
+[] User visits root, clicks link to search option
 [] User enters prep time, sees list of recipes with prep time
 [] User clicks recipe name and is taken to recipe show page
 [] User fills out form incorrectly, sees prompt to refill/resubmit
@@ -50,7 +49,7 @@ As a user
 I want to search by ingredient and prep time
 So I can use something I already have and know when a meal will be ready.
 
-[] User visits index, clicks link to search option
+[] User visits root, clicks link to search option
 [] User enters ingredient and prep time, sees list of recipes that have matching criteria
 [] User clicks recipe name and is taken to recipe show page
 [] User fills out form incorrectly, sees prompt to refill/resubmit

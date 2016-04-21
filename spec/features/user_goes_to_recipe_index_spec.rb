@@ -14,7 +14,7 @@ feature "user goes to list of available recipes" do
     pepper_risotto = Recipe.create(name: "Roasted Pepper Risotto")
     sticky_lemon = Recipe.create(name: "Sticky Lemon Chicken")
 
-    visit root_path
+    visit recipes_path
 
     expect(page).to have_content "Recipes"
     expect(page).to have_content chicken_ziti.name
@@ -27,7 +27,7 @@ feature "user goes to list of available recipes" do
     pasta_sauce = Recipe.create(name: "Pasta and Sauce", instructions: "Boil
     water, cook pasta, and drain. Pour sauce from jar. Enjoy!")
 
-    visit root_path
+    visit recipes_path
 
     expect(page).to have_link "Pasta and Sauce"
 
@@ -41,7 +41,7 @@ feature "user goes to list of available recipes" do
 
     login_as(@user)
 
-    visit root_path
+    visit recipes_path
 
     expect(page).to have_link "Favorites"
   end

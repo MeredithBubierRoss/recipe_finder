@@ -1,3 +1,11 @@
 <h1><%= @recipe.name %></h1>
-<%= @recipe.ingredients %>
+Ingredient list:
+<%= @recipe.ingredients %><br />
+Instructions:
 <%= @recipe.instructions %>
+
+
+<br />
+<%= link_to "Home", root_path %>
+<br />
+<%= link_to "Return to list", recipes_path %>

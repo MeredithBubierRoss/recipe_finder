@@ -10,22 +10,21 @@ require 'rails_helper'
 
 feature "user goes to list of available recipes" do
   scenario "user sees list of recipes on index" do
-    chicken_ziti = Recipe.create(name: "Chicken Broccoli Ziti")
-    pepper_risotto = Recipe.create(name: "Roasted Pepper Risotto")
-    sticky_lemon = Recipe.create(name: "Sticky Lemon Chicken")
+    food1 = FactoryGirl.create(:recipe)
+    food2 = FactoryGirl.create(:recipe)
+    food3 = FactoryGirl.create(:recipe)
 
     visit recipes_path
 
     expect(page).to have_content "Recipes"
-    expect(page).to have_content chicken_ziti.name
-    expect(page).to have_content pepper_risotto.name
-    expect(page).to have_content sticky_lemon.name
-
+    expect(page).to have_content food1.name
+    expect(page).to have_content food2.name
+    expect(page).to have_content food3.name
   end
 
   scenario "user clicks recipe name and gets recipe details" do
-    pasta_sauce = Recipe.create(name: "Pasta and Sauce", instructions: "Boil
-    water, cook pasta, and drain. Pour sauce from jar. Enjoy!")
+    pasta_sauce = Recipe.create(name: "Pasta and Sauce", ingredients: "Pasta and sauce",
+    instructions: "Boil water, cook pasta, and drain. Pour sauce from jar. Enjoy!")
 
     visit recipes_path
 
@@ -44,5 +43,34 @@ feature "user goes to list of available recipes" do
     visit recipes_path
 
     expect(page).to have_link "Favorites"
+  end
+
+  scenario "user returns to root from list" do
+    visit recipes_path
+
+    click_link "Home"
+
+    expect(page.current_path).to eq root_path
+  end
+
+  scenario "user returns to recipe list" do
+    @recipe = FactoryGirl.create(:recipe)
+
+    visit recipes_path
+    click_link @recipe.name
+
+    click_link "Return"
+    expect(page.current_path).to eq recipes_path
+  end
+
+  scenario "user returns to root from recipe" do
+    @recipe = FactoryGirl.create(:recipe)
+
+    visit recipes_path
+    click_link @recipe.name
+
+    click_link "Home"
+
+    expect(page.current_path).to eq root_path
   end
 end

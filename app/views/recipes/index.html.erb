@@ -1,7 +1,12 @@
-<h1>Your Recipes</h1>
+<% if user_signed_in? %>
+  <h1>Your Recipes</h1>
+<% else %>
+  <h1>Available Recipes</h1>
+<% end %>
 
 <% if user_signed_in? %>
-  <%= link_to 'Favorites' %>
+  <%= link_to 'Favorites' %><br />
+  <%= link_to 'Add a new recipe', new_recipe_path %>
 <% end %>
 <br><br>
 
@@ -10,3 +15,5 @@
     <li><%= link_to recipe.name, recipe %></li>
   <% end %>
 </ul>
+
+<%= link_to "Home", root_path %>

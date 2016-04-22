@@ -71,3 +71,21 @@ So I can get one of the recipes I have saved.
 [] Authenticated user clicks link for favorites
 [] Authenticated user sees favorites list
 [] Authenticated user clicks recipe name and is taken to recipe show page
+
+
+As a user
+I want to sign into my account
+And add a new recipe to my personal cookbook
+
+[] User goes to personal cookbook, sees list of recipes
+[] User adds a new recipe to personal cookbook
+[] User can favorite a recipe they like
+[] User fills out form incorrectly, sees error messages
+
+As a user
+I want to sign into my account
+And add a new recipe to the global cookbook
+
+[X] User goes to global cookbook, sees list of recipes
+[X] User adds a new recipe to global cookbook
+[X] User fills out form incorrectly, sees error messages

@@ -6,7 +6,7 @@ Enter an ingredient:
   <%= submit_tag "Search", name: "Search" %>
 <% end %>
 
-Recipe options for <%= @query %>
+Recipe options: 
 <% @results.each do |recipe| %>
   <li><%= link_to recipe.name, "/ingredients/#{recipe.id}" %></li>
 <% end %>

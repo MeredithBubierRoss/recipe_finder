@@ -1,6 +1,11 @@
 class RecipesController < ApplicationController
   def index
     @recipes = Recipe.all
+    if params[:search]
+      @recipes = Recipe.search(params[:search])
+    else
+      @recipes = Recipe.all
+    end
   end
 
   def show
@@ -14,8 +19,11 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     if @recipe.save
-      flash[:success] = "Recipe saved!"
+      flash[:notice] = "Recipe saved!"
       redirect_to recipes_path
+    else
+      flash[:alert] = @recipe.errors.full_messages.join(", ")
+      render :new
     end
   end
 

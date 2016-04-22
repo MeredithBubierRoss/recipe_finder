@@ -1,14 +1,14 @@
 <h1>Add a new Recipe</h1>
 
 <%= form_for(@recipe) do |f| %>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
 
-    <%= f.label :ingredients %><br />
-    <%= f.text_area :ingredients %>
+  <%= f.label :ingredients %><br />
+  <%= f.text_area :ingredients %>
 
-    <%= f.label :instructions %><br />
-    <%= f.text_area :instructions %>
+  <%= f.label :instructions %><br />
+  <%= f.text_area :instructions %>
 
-    <%= f.submit "Add recipe" %>
+  <%= f.submit "Add recipe" %>
 <% end %>

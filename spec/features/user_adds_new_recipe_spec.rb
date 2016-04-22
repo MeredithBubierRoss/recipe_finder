@@ -2,12 +2,11 @@ require 'rails_helper'
 
 # As a user
 # I want to sign into my account
-# And add a new recipe to my personal cookbook
+# And add a new recipe to the global cookbook
 #
-# [] User goes to personal cookbook, sees list of recipes
-# [] User adds a new recipe to cookbook
-# [] User can favorite a recipe they like
-# [] User fills out form incorrectly, sees error messages
+# [X] User goes to global cookbook, sees list of recipes
+# [X] User adds a new recipe to global cookbook
+# [X] User fills out form incorrectly, sees error messages
 
 feature "authenticated user adds a new recipe" do
   scenario "authenticated user adds recipe" do
@@ -34,11 +33,25 @@ feature "authenticated user adds a new recipe" do
     visit recipes_path
 
     expect(page).to have_content "Available Recipes"
+    expect(page).to_not have_content "Add a new recipe"
   end
 
   scenario "user favorites a recipe" do
   end
 
   scenario "user fills out form incorrectly" do
+    @user = FactoryGirl.create(:user)
+
+    login_as(@user)
+
+    visit root_path
+
+    click_link "cookbook"
+    click_link "Add a new recipe"
+
+    click_button "Add recipe"
+
+    expect(page).to have_content "Name can't be blank, Instructions can't be
+      blank, Ingredients can't be blank"
   end
 end

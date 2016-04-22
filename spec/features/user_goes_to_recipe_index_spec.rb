@@ -24,7 +24,7 @@ feature "user goes to list of available recipes" do
 
   scenario "user clicks recipe name and gets recipe details" do
     pasta_sauce = Recipe.create(name: "Pasta and Sauce", ingredients: "Pasta and sauce",
-    instructions: "Boil water, cook pasta, and drain. Pour sauce from jar. Enjoy!")
+                  instructions: "Boil water, cook pasta, and drain. Pour sauce from jar. Enjoy!")
 
     visit recipes_path
 

@@ -4,10 +4,9 @@ require 'rails_helper'
 # I want to sign into my account
 # And add a new recipe to my personal cookbook
 #
-# [] User goes to personal cookbook, sees list of recipes
-# [] User adds a new recipe to cookbook
-# [] User can favorite a recipe they like
-# [] User fills out form incorrectly, sees error messages
+# [X] User goes to personal cookbook, sees list of recipes
+# [X] User adds a new recipe to the public cookbook
+# [X] User fills out form incorrectly, sees error messages
 
 feature "authenticated user adds a new recipe" do
   scenario "authenticated user adds recipe" do
@@ -40,5 +39,13 @@ feature "authenticated user adds a new recipe" do
   end
 
   scenario "user fills out form incorrectly" do
+    @user = FactoryGirl.create(:user)
+
+    login_as(@user)
+
+    visit new_recipe_path
+    click_button "Add recipe"
+
+    expect(page).to have_content "Name can't be blank, Instructions can't be blank, Ingredients can't be blank"
   end
 end

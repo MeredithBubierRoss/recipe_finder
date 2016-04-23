@@ -2,8 +2,8 @@
 # I want to search the cookbook by ingredient
 # So I can find a recipe that has a component I want to eat in it.
 #
-# [] User goes to cookbook from root
-# [] User enters ingredient, sees list of recipes with ingredient
+# [X] User goes to cookbook from root
+# [X] User enters ingredient, sees list of recipes with ingredient
 # [] User clicks recipe name and is taken to recipe show page
 
 feature "user searches cookbook for recipes by ingredient" do
@@ -35,7 +35,7 @@ feature "user searches cookbook for recipes by ingredient" do
 
     click_link @recipe.name
     expect(page).to have_content @recipe.name
-    expect(page).to have_content @recipe.ingredients
+    expect(page).to have_content "cheese"
     expect(page).to have_content @recipe.instructions
   end
 end

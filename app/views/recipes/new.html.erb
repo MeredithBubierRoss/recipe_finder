@@ -1,14 +1,17 @@
 <h1>Add a new Recipe</h1>
 
 <%= form_for(@recipe) do |f| %>
-  <%= f.label :name %><br />
-  <%= f.text_field :name %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, placeholder: "Recipe Name" %>
 
-  <%= f.label :ingredients %><br />
-  <%= f.text_area :ingredients %>
+    <%= f.label :ingredients %><br />
+    <%= f.text_area :ingredients, placeholder: "Ingredient List" %>
 
-  <%= f.label :instructions %><br />
-  <%= f.text_area :instructions %>
+    <%= f.label :instructions %><br />
+    <%= f.text_area :instructions, placeholder: "Instructions" %>
 
   <%= f.submit "Add recipe" %>
 <% end %>
+<br/>
+<%= link_to "Home", root_path %><br/>
+<%= link_to "Recipes List", recipes_path %>

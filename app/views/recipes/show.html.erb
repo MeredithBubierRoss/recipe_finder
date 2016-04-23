@@ -1,6 +1,11 @@
 <h1><%= @recipe.name %></h1>
 Ingredient list:
-<%= @recipe.ingredients %><br />
+<ul>
+  <% ingredient_list = @recipe.ingredients.split(", ") %>
+  <% ingredient_list.each do |ingredient| %>
+    <li><%= ingredient %></li>
+  <% end %><br>
+</ul>
 Instructions:
 <%= @recipe.instructions %>
 

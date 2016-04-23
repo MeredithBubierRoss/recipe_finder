@@ -2,10 +2,10 @@ require 'rails_helper'
 
 # As a user
 # I want to sign into my account
-# And add a new recipe to the global cookbook
+# And add a new recipe to the public cookbook
 #
-# [X] User goes to global cookbook, sees list of recipes
-# [X] User adds a new recipe to global cookbook
+# [X] User goes to public cookbook, sees list of recipes
+# [X] User adds a new recipe to the public cookbook
 # [X] User fills out form incorrectly, sees error messages
 
 feature "authenticated user adds a new recipe" do
@@ -44,14 +44,9 @@ feature "authenticated user adds a new recipe" do
 
     login_as(@user)
 
-    visit root_path
-
-    click_link "cookbook"
-    click_link "Add a new recipe"
-
+    visit new_recipe_path
     click_button "Add recipe"
 
-    expect(page).to have_content "Name can't be blank, Instructions can't be
-      blank, Ingredients can't be blank"
+    expect(page).to have_content "Name can't be blank, Instructions can't be blank, Ingredients can't be blank"
   end
 end

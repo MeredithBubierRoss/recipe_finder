@@ -2,9 +2,9 @@ require 'rails_helper'
 
 # As a user
 # I want to sign into my account
-# And add a new recipe to my personal cookbook
+# And add a new recipe to the public cookbook
 #
-# [X] User goes to personal cookbook, sees list of recipes
+# [X] User goes to public cookbook, sees list of recipes
 # [X] User adds a new recipe to the public cookbook
 # [X] User fills out form incorrectly, sees error messages
 
@@ -33,6 +33,7 @@ feature "authenticated user adds a new recipe" do
     visit recipes_path
 
     expect(page).to have_content "Available Recipes"
+    expect(page).to_not have_content "Add a new recipe"
   end
 
   scenario "user favorites a recipe" do

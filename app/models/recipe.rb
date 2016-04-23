@@ -5,4 +5,7 @@ class Recipe < ActiveRecord::Base
   validates :instructions, presence: true
   validates :ingredients, presence: true
 
+  def self.search(query)
+    where("ingredients like ?", "%#{query}%")
+  end
 end

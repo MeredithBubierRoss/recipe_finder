@@ -16,6 +16,9 @@ class RecipesController < ApplicationController
     if @recipe.save
       flash[:success] = "Recipe saved!"
       redirect_to recipes_path
+    else
+      flash[:alert] = @recipe.errors.full_messages.join(", ")
+      render :new
     end
   end
 

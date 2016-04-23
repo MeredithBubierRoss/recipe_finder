@@ -18,6 +18,7 @@ gem 'dotenv-rails'
 gem 'yummly'
 gem 'httparty'
 gem 'vcr', '~> 3.0'
+gem 'pg_search'
 
 group :test do
   gem 'webmock'

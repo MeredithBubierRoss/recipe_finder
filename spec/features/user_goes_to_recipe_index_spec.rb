@@ -15,7 +15,6 @@ feature "user goes to list of available recipes" do
     food3 = FactoryGirl.create(:recipe)
 
     visit recipes_path
-    binding.pry
 
     expect(page).to have_content "Recipes"
     expect(page).to have_content food1.name

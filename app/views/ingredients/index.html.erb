@@ -6,10 +6,12 @@ Enter an ingredient:
   <%= submit_tag "Search", name: "Search" %>
 <% end %>
 
-Recipe options: 
-<% @results.each do |recipe| %>
-  <li><%= link_to recipe.name, "/ingredients/#{recipe.id}" %></li>
-<% end %>
+Recipe options:
+<ul>
+  <% @results.each do |recipe| %>
+    <li><%= link_to recipe.name, "/ingredients/#{recipe.id}" %></li>
+  <% end %>
+</ul>
 
 <br />
 Recipe search powered by <a href='http://www.yummly.com/recipes'><img alt='Yummly' src='http://static.yummly.com/api-logo.png'/></a>

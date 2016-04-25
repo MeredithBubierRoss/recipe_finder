@@ -10,12 +10,15 @@
 <% end %>
 <br><br>
 
-
+Search the Cookbook:
 <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search the Cookbook" %>
+  <%= text_field_tag :search, params[:search], placeholder: "What sounds tasty?" %>
   <%= submit_tag "Search", :name => nil %>
 <% end %>
 
+<% if @recipes.blank? %>
+  There are no recipes containing the term <%= params[:search] %>.
+<% end %>
 
 <ul>
   <% @recipes.each do |recipe| %>

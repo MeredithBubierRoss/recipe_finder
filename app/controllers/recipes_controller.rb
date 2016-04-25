@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.all
     if params[:search]
-      @recipes = Recipe.search(params[:search])
+      @recipes = Recipe.search(params[:search]) unless params[:search].blank?
     else
       @recipes = Recipe.all
     end
@@ -30,6 +30,6 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :ingredients, :instructions)
+    params.require(:recipe).permit(:name, :ingredients, :instructions, :duration)
   end
 end

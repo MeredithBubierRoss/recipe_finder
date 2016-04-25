@@ -1,11 +1,12 @@
 class Recipe < ActiveRecord::Base
-  has_many :users
+  belongs_to :user
 
   validates :name, presence: true
   validates :instructions, presence: true
   validates :ingredients, presence: true
+  validates :duration, presence: true
 
   def self.search(query)
-    where("ingredients like ?", "%#{query}%")
+    where("ingredients ilike ? OR name ilike ? OR duration ilike ?", "%#{query}%", "%#{query}%", "%#{query}%")
   end
 end

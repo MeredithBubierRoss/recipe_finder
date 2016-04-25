@@ -5,9 +5,9 @@ require 'rails_helper'
 # And get the option to look at my personal recipes
 # Or find something new
 #
-# [] User visits welcome page
-# [] User chooses to see personal recipes
-# [] User chooses to find a new recipe
+# [X] User visits welcome page
+# [X] User chooses to see personal recipes
+# [X] User chooses to find a new recipe
 
 feature "user visits welcome page" do
   scenario "user visits welcome page" do

@@ -23,6 +23,7 @@ feature "authenticated user adds a new recipe" do
     fill_in "Name", with: @recipe.name
     fill_in "Instructions", with: @recipe.instructions
     fill_in "Ingredients", with: @recipe.ingredients
+    fill_in "Duration", with: @recipe.duration
 
     click_button "Add recipe"
 

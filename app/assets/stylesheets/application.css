@@ -22,12 +22,6 @@
   background-image: url('app_background2.png');
 }
 
-.top-banner{
-  height: 400px;
-  width: 800px;
-  background: url('app_banner_1.png');
-}
-
 ul {
   list-style-type: none;
 }

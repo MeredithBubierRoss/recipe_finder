@@ -15,7 +15,7 @@ feature "user searches api recipes by ingredient" do
 
     fill_in :query, with: "shrimp"
     click_button "Search"
-    expect(page).to have_content("Shrimp")
+    expect(page).to have_content "Shrimp"
   end
 
   scenario "user clicks recipe name and gets recipe information", :vcr do

@@ -1,8 +1,13 @@
 class RecipesController < ApplicationController
   def index
     @recipes = Recipe.all
-    if params[:search]
-      @recipes = Recipe.search(params[:search]) unless params[:search].blank?
+    if params[:content] && params[:duration].blank?
+      @recipes = Recipe.search(params[:content]) unless params[:content].blank?
+    elsif params[:duration] && params[:content].blank?
+      @recipes = Recipe.search(params[:duration]) unless params[:duration].blank?
+    elsif params[:content] && params[:duration]
+      @first_recipes = Recipe.search(params[:content])
+      @recipes = @first_recipes.search(params[:duration])
     else
       @recipes = Recipe.all
     end

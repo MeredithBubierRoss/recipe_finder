@@ -4,9 +4,9 @@ require 'rails_helper'
 # I want to search the public cookbook by prep time
 # So I can plan a meal in a certain timeframe
 #
-# [] User goes to cookbook from root
-# [] User enters prep time, sees list of recipes with prep time
-# [] User clicks recipe name and is taken to recipe show page
+# [X] User goes to cookbook from root
+# [X] User enters prep time, sees list of recipes with prep time
+# [X] User clicks recipe name and is taken to recipe show page
 
 feature "user searches cookbook for recipes by prep time" do
   scenario "user gets to cookbook from homepage" do
@@ -24,10 +24,10 @@ feature "user searches cookbook for recipes by prep time" do
       instructions: "Cook on stove until cheese is melted. Enjoy", duration: "10 minutes")
 
     visit recipes_path
-    fill_in("search", with: @recipe2.duration)
+    fill_in("duration", with: "30 minutes")
     click_button "Search"
-
     expect(page).to have_content @recipe2.name
+    expect(page).to_not have_content @recipe3.name
     expect(page).to_not have_content @recipe1.name
   end
 
@@ -35,7 +35,7 @@ feature "user searches cookbook for recipes by prep time" do
     @recipe = FactoryGirl.create(:recipe)
 
     visit recipes_path
-    fill_in("search", with: @recipe.duration)
+    fill_in("duration", with: @recipe.duration)
     click_button "Search"
 
     expect(page).to have_content @recipe.name

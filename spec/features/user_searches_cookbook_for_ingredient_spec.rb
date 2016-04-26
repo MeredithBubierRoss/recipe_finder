@@ -27,7 +27,7 @@ feature "user searches cookbook for recipes by ingredient" do
       mayonnaise", duration: "5 minutes")
 
     visit recipes_path
-    fill_in("search", with: "cheese")
+    fill_in("content", with: "cheese")
     click_button "Search"
 
     expect(page).to have_content @recipe1.name
@@ -40,7 +40,7 @@ feature "user searches cookbook for recipes by ingredient" do
     @recipe = FactoryGirl.create(:recipe)
 
     visit recipes_path
-    fill_in "search", with: "cheese"
+    fill_in "content", with: "cheese"
     click_button "Search"
 
     expect(page).to have_content @recipe.name

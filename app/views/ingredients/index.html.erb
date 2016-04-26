@@ -1,6 +1,6 @@
 <h1>Recipe Search</h1>
 
-Enter an ingredient:
+Enter an ingredient, timeframe, or both:
 <%= form_tag({controller: 'ingredients', action: 'index'}, {method: :get}) do %>
   <%= text_field_tag :query %>
   <%= submit_tag "Search", name: "Search" %>

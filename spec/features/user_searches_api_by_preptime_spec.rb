@@ -15,7 +15,7 @@ feature "user searches api recipes by prep time" do
 
     fill_in :query, with: "30 minutes"
     click_button "Search"
-    expect(page).to have_content("30-Minute Pork Fajitas")
+    expect(page).to have_content "30-Minute Pork Fajitas"
   end
 
   scenario "user clicks recipe name and gets recipe information", :vcr do

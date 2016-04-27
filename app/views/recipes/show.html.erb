@@ -10,7 +10,13 @@ Ingredient list:
 Instructions:
 <%= @recipe.instructions %>
 <br />
-
+<% if user_signed_in? %>
+  <% user = current_user.id %>
+  <% recipe_user = @recipe.user_id %>
+  <% if user == recipe_user %>
+    <%= link_to "Edit", edit_recipe_path(@recipe) %>
+  <% end %>
+<% end %>
 <br />
 <%= link_to "Home", root_path %>
 <br />

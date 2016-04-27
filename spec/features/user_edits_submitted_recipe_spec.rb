@@ -29,7 +29,7 @@ feature "user edits a recipe" do
     expect(page).to have_content "Adjust your recipe"
   end
 
-  scenario "authoring user can't edit recipe" do
+  scenario "only authoring user can edit recipe" do
     @user1 = FactoryGirl.create(:user)
     @user2 = FactoryGirl.create(:user)
     @recipe1 = FactoryGirl.create(:recipe, user: @user1)

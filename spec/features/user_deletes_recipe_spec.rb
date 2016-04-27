@@ -4,10 +4,30 @@ require 'rails_helper'
 # I want to delete a recipe I wrote
 # Because I want to take it out of the cookbook
 #
+# [] User only sees delete on recipes they have written
 # [X] User selects recipe to delete
 # [X] User deletes recipe
 
 feature "user deletes a recipe they wrote" do
+  scenario "user can only delete recipe they wrote" do
+    @user1 = FactoryGirl.create(:user)
+    @user2 = FactoryGirl.create(:user)
+    @recipe1 = FactoryGirl.create(:recipe, user: @user1)
+    @recipe2 = FactoryGirl.create(:recipe, user: @user2)
+
+    visit root_path
+
+    click_link "sign in"
+    fill_in "Email", with: @user1.email
+    fill_in "Password", with: @user1.password
+
+    click_button "Log in"
+    click_link "cookbook"
+    click_link @recipe2.name
+
+    expect(page).to_not have_content "Delete"
+  end
+
   scenario "user selects a recipe to delete" do
     @user = FactoryGirl.create(:user)
     @recipe1 = FactoryGirl.create(:recipe, user: @user)

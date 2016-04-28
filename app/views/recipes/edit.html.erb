@@ -1,4 +1,4 @@
-<h1>Adjust your recipe</h1>
+<h2>Adjust your recipe</h2>
 
 <%= form_tag(recipe_path, method: "patch") %>
 <%= form_for @recipe do |f| %>
@@ -17,4 +17,6 @@
   <%= f.submit "Update recipe" %>
 <% end %>
 <br>
-<%= link_to "Cancel update", recipe_path %>
+<div class="nav_links">
+  <%= link_to "Cancel update", recipe_path %>
+</div>

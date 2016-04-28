@@ -1,0 +1,25 @@
+$purple: #7a344d;
+$hover-purple: #61293d;
+
+.welcome {
+  padding: 30px;
+}
+
+.button {
+  background-color: $purple;
+}
+
+.button:hover {
+  background-color: $hover-purple;
+}
+
+.button:focus {
+  background-color: $hover-purple;
+}
+
+.welcome_links {
+  a {
+    margin: 10px;
+    padding: 10px;
+  }
+}

@@ -15,6 +15,9 @@
  *= require foundation_and_overrides
 
  */
+$white: #ffffff;
+$green: #457744;
+$red: #b02542;
 
 .bg-splash {
   height: 100%;
@@ -27,13 +30,13 @@ ul {
 }
 
 .notice {
-  background-color: #457744;
-  color: #ffffff;
+  background-color: $green;
+  color: $white;
   padding-left: 25px;
 }
 
 .alert {
-  background-color: #b02542;
-  color: #ffffff;
+  background-color: $red;
+  color: $white;
   padding-left: 25px;
 }

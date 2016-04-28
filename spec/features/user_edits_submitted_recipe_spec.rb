@@ -5,8 +5,8 @@ require 'rails_helper'
 # So I can make changes when I feel they are necessary.
 #
 # [X] User can get to edit form
-# [] User makes changes to recipe that are saved
-# [] User chooses not to make changes and edit is cancelled
+# [X] User makes changes to recipe that are saved
+# [X] User chooses not to make changes and edit is cancelled
 
 feature "user edits a recipe" do
   scenario "user goes to edit form" do

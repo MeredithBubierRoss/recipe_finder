@@ -1,4 +1,4 @@
-<h1>Recipe Search</h1>
+<h2>Recipe Search</h2>
 
 Enter an ingredient, timeframe, or both:
 <%= form_tag({controller: 'ingredients', action: 'index'}, {method: :get}) do %>
@@ -7,14 +7,18 @@ Enter an ingredient, timeframe, or both:
 <% end %>
 
 Recipe options:
-<ul>
-  <% @results.each do |recipe| %>
-    <li><%= link_to recipe.name, "/ingredients/#{recipe.id}" %></li>
-  <% end %>
-</ul>
+<div class="api_search">
+  <ul>
+    <% @results.each do |recipe| %>
+      <li><%= link_to recipe.name, "/ingredients/#{recipe.id}" %></li>
+    <% end %>
+  </ul>
+</div>
 
 <br />
 Recipe search powered by <a href='http://www.yummly.com/recipes'><img alt='Yummly' src='http://static.yummly.com/api-logo.png'/></a>
 <br />
 
-<%= link_to "Home", root_path %>
+<div class="nav_links">
+  <%= link_to "Home", root_path %>
+</div>

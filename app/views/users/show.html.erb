@@ -1,10 +1,14 @@
-Your profile, <%= @user.email %><br>
+<h3>Your profile, <%= @user.email %><br></h3>
 <% @recipes = Recipe.where(user: @user.id) %>
-<ul>
-  <% @recipes.each do |recipe| %>
-    <li><%= link_to recipe.name, recipe %></li>
-  <% end %>
-</ul>
+<div class="user_recipes">
+  <ul>
+    <% @recipes.each do |recipe| %>
+      <li><%= link_to recipe.name, recipe %> (<%= recipe.duration %>)</li>
+    <% end %>
+  </ul>
+</div>
 <br>
-<%= link_to "Home", root_path %><br />
-<%= link_to "Recipe List", recipes_path %>
+<div class="nav_links">
+  <%= link_to "Home", root_path %><br /><br />
+  <%= link_to "Recipe List", recipes_path %>
+</div>

@@ -1,0 +1,47 @@
+$purple: #7a344d;
+$alert: #b02542;
+$dark_green: #254b25;
+$white: #fefefe;
+
+.cookbook_search {
+  padding: 10px;
+  padding-bottom: 50px;
+}
+
+.recipe_results {
+  a {
+    color: $purple;
+  }
+}
+
+#recipes_alert {
+  padding-left: 20px;
+  color: $alert;
+}
+
+.recipe_header_links {
+  a {
+    color: $dark_green;
+  }
+}
+
+.recipe_ingredients {
+  padding: 30px;
+}
+
+.recipe_instructions {
+  a {
+    color: $dark_green;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+  }
+}
+
+.user_recipe_buttons {
+  a {
+    color: $white;
+    padding: 10px;
+    margin: 10px;
+  }
+}

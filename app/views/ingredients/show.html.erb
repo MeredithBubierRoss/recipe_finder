@@ -8,8 +8,13 @@
 </ul>
 
 Like what you see? Get more info here:<br />
-<h3><%= link_to @recipe.name, @recipe.attribution.url %></br></h3>
+<div class="api_info">
+  <h3><%= link_to @recipe.name, @recipe.attribution.url %></br></h3>
+</div>
+
 <%= @recipe.attribution.text %><br>
 <img src="http://static.yummly.com/api-logo.png"></img>
 <br />
-<%= link_to "Home", root_path %>
+<div class="nav_links">
+  <%= link_to "Home", root_path %>
+</div>

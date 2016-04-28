@@ -1,30 +1,40 @@
-<% if user_signed_in? %>
-  <h1>Your Recipes</h1>
-<% else %>
-  <h1>Available Recipes</h1>
-<% end %>
+<div class="recipe_header">
+  <% if user_signed_in? %>
+    <h2>Your Recipes</h2>
+  <% else %>
+    <h2>Available Recipes</h2>
+  <% end %>
+</div>
 
-<% if user_signed_in? %>
-  <%= link_to 'Favorites' %><br />
-  <%= link_to 'Add a new recipe', new_recipe_path %>
-<% end %>
+<div class="recipe_header_links">
+  <% if user_signed_in? %>
+    <%= link_to 'Add a new recipe', new_recipe_path %>
+  <% end %>
+</div>
 <br><br>
 
-Search the Cookbook:
-<%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :content, params[:content], placeholder: "What sounds tasty?" %>
-  <%= text_field_tag :duration, params[:duration], placeholder: "How long do you want to cook for?" %>
-  <%= submit_tag "Search", :name => nil %>
-<% end %>
-
-<% if @recipes.blank? %>
-  There are no recipes containing the term <%= params[:content] || params[:duration] %>.
-<% end %>
-
-<ul>
-  <% @recipes.each do |recipe| %>
-    <li><%= link_to recipe.name, recipe %></li>
+<div class="cookbook_search">
+  Search the Cookbook by Ingredient or Prep Time (or both!):
+  <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :content, params[:content], placeholder: "What sounds tasty?" %>
+    <%= text_field_tag :duration, params[:duration], placeholder: "How long do you have?" %>
+    <%= submit_tag "Search", :name => nil %>
   <% end %>
-</ul>
+</div>
 
-<%= link_to "Home", root_path %>
+<div class="recipe_results">
+  <div id="recipes_alert">
+    <% if @recipes.blank? %>
+      There are no recipes containing the term <%= params[:content] %> and <%= params[:duration] %>.
+    <% end %>
+  </div>
+
+  <ul>
+    <% @recipes.each do |recipe| %>
+      <li><%= link_to recipe.name, recipe %> (<%= recipe.duration %>)</li>
+    <% end %>
+  </ul>
+</div>
+<div class="nav_links">
+  <%= link_to "Home", root_path %>
+</div>

@@ -1,10 +1,11 @@
 <h2><%= @recipe.name %></h2><br/>
 Total time: <%= @recipe.duration %></br>
+Serves: <%= @recipe.servings %><br />
 
 <div class="recipe_ingredients">
   Ingredient list:
   <ul>
-    <% ingredient_list = @recipe.ingredients.split(", ") %>
+    <% ingredient_list = @recipe.ingredients.split("; ") %>
     <% ingredient_list.each do |ingredient| %>
       <li><%= ingredient %></li>
     <% end %><br>
@@ -12,8 +13,9 @@ Total time: <%= @recipe.duration %></br>
 </div>
 <div class="recipe_instructions">
   Instructions:
-  <%= @recipe.instructions %>
   <br />
+  <%= @recipe.instructions %>
+  <br /><br />
   <% if user_signed_in? %>
     <% user = current_user.id %>
     <% recipe_user = @recipe.user_id %>

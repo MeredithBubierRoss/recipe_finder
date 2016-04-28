@@ -1,5 +1,5 @@
 User.create(email: "test@test.com", password: "password", password_confirmation:
-"password")
+  "password")
 Recipe.create(name: "Sticky Lemon Chicken (adjusted from Gordon Ramsay)",
   ingredients: "1 lb chicken tenderloins, cut into bite size pieces; salt and
   pepper; 3-4 Tb olive oil; 1 head of garlic, minced or pressed; A few thyme

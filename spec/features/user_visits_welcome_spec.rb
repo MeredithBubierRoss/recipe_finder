@@ -22,7 +22,7 @@ feature "user visits welcome page" do
     click_link "cookbook"
 
     expect(page.current_path).to eq recipes_path
-    expect(page).to have_content "Available Recipes"
+    expect(page).to have_content "The Cookbook"
   end
 
   scenario "authenticated user chooses cookbook" do
@@ -34,7 +34,7 @@ feature "user visits welcome page" do
     click_link "cookbook"
 
     expect(page.current_path).to eq recipes_path
-    expect(page).to have_content "Your Recipes"
+    expect(page).to have_content "The Cookbook"
   end
 
   scenario "user chooses to search for new recipe" do

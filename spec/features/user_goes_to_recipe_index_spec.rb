@@ -15,7 +15,7 @@ feature "user goes to list of available recipes" do
 
     visit recipes_path
 
-    expect(page).to have_content "Recipes"
+    expect(page).to have_content "The Cookbook"
     expect(page).to have_content food1.name
     expect(page).to have_content food2.name
     expect(page).to have_content food3.name
@@ -66,7 +66,7 @@ feature "user goes to list of available recipes" do
     within("nav.title-bar") do
       click_link "Home"
     end
-    
+
     expect(page.current_path).to eq root_path
   end
 end

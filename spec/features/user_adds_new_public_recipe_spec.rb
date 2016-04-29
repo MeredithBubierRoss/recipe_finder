@@ -34,7 +34,7 @@ feature "authenticated user adds a new recipe" do
   scenario "unauthenticated user tries to add recipe" do
     visit recipes_path
 
-    expect(page).to have_content "Available Recipes"
+    expect(page).to have_content "The Cookbook"
     expect(page).to_not have_content "Add a new recipe"
   end
 

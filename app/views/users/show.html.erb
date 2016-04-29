@@ -1,5 +1,5 @@
 <div class="panel">
-  <h3>Your profile, <%= @user.email %><br></h3>
+  <h5>Your profile, <%= @user.email %><br></h5>
   <% @recipes = Recipe.where(user: @user.id) %>
   <div class="user_recipes">
     <h3>

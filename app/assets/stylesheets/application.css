@@ -20,9 +20,9 @@
   height: 100%;
   width: 100%;
   background-image: url('app_background2.png');
-  -moz-text-size-adjust: 20%;
-  -webkit-text-size-adjust: 20%;
-  -ms-text-size-adjust: 20%;
+  -moz-text-size-adjust: auto;
+  -webkit-text-size-adjust: auto;
+  -ms-text-size-adjust: auto;
 }
 
 .notice {

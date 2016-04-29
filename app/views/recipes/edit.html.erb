@@ -1,25 +1,26 @@
-<h2>Adjust your recipe</h2>
+<div class="panel">
+  <h2>Adjust your recipe</h2>
 
-<%= form_tag(recipe_path, method: "patch") %>
-<%= form_for @recipe do |f| %>
-  <%= f.label :name %><br />
-  <%= f.text_field :name, placeholder: "Update Name" %>
+  <%= form_tag(recipe_path, method: "patch") %>
+  <%= form_for @recipe do |f| %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, placeholder: "Update Name" %>
 
-  <%= f.label :ingredients %><br />
-  <%= f.text_area :ingredients, placeholder: "Update List" %>
+    <%= f.label :ingredients %><br />
+    <%= f.text_area :ingredients, placeholder: "Update List" %>
 
-  <%= f.label :instructions %><br />
-  <%= f.text_area :instructions, placeholder: "Update Instructions" %>
+    <%= f.label :instructions %><br />
+    <%= f.text_area :instructions, placeholder: "Update Instructions" %>
 
-  <%= f.label :duration %><br />
-  <%= f.text_field :duration, placeholder: "Update Time" %>
+    <%= f.label :duration %><br />
+    <%= f.text_field :duration, placeholder: "Update Time" %>
 
-  <%= f.label :servings %><br />
-  <%= f.text_field :servings, placeholder: "Update Servings" %>
+    <%= f.label :servings %><br />
+    <%= f.text_field :servings, placeholder: "Update Servings" %>
 
-  <%= f.submit "Update recipe" %>
-<% end %>
-<br>
-<div class="nav_links">
-  <%= link_to "Cancel update", recipe_path %>
+    <%= f.submit "Update recipe", class: "button" %>
+  <% end %>
+  <div class="user_recipe_buttons">
+    <%= link_to "Cancel update", recipe_path, class: "button" %>
+  </div>
 </div>

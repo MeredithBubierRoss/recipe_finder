@@ -1,35 +1,33 @@
-<h2><%= @recipe.name %></h2><br/>
-Total time: <%= @recipe.duration %></br>
-Serves: <%= @recipe.servings %><br />
-
-<div class="recipe_ingredients">
-  Ingredient list:
-  <ul>
-    <% ingredient_list = @recipe.ingredients.split("; ") %>
-    <% ingredient_list.each do |ingredient| %>
-      <li><%= ingredient %></li>
-    <% end %><br>
-  </ul>
-</div>
-<div class="recipe_instructions">
-  Instructions:
-  <br />
-  <%= @recipe.instructions %>
-  <br /><br />
-  <% if user_signed_in? %>
-    <% user = current_user.id %>
-    <% recipe_user = @recipe.user_id %>
-    <div class="user_recipe_buttons">
-      <% if user == recipe_user %>
-        <%= link_to "Edit", edit_recipe_path(@recipe), class: "button" %>
-        <%= link_to "Delete", recipe_path(@recipe), method: :delete, class: "button" %>
-      <% end %>
-    </div>
+<div class="panel">
+  <h2><%= @recipe.name %></h2><br/>
+  Total time: <%= @recipe.duration %></br>
+  <% if !@recipe.servings.blank? %>
+    Serves:
+    <%= @recipe.servings %><br />
   <% end %>
-</div>
-<br />
-<div class="nav_links">
-  <%= link_to "Home", root_path %>
-  <br /><br />
-  <%= link_to "Return to list", recipes_path %>
+  <div class="recipe_ingredients">
+    Ingredient list:
+    <ul>
+      <% ingredient_list = @recipe.ingredients.split("; ") %>
+      <% ingredient_list.each do |ingredient| %>
+        <li><%= ingredient %></li>
+      <% end %><br>
+    </ul>
+  </div>
+  <div class="recipe_instructions">
+    Instructions:
+    <br />
+    <%= @recipe.instructions %>
+    <br /><br />
+    <% if user_signed_in? %>
+      <% user = current_user.id %>
+      <% recipe_user = @recipe.user_id %>
+      <div class="user_recipe_buttons">
+        <% if user == recipe_user %>
+          <%= link_to "Edit", edit_recipe_path(@recipe), class: "button" %>
+          <%= link_to "Delete", recipe_path(@recipe), method: :delete, class: "button" %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>

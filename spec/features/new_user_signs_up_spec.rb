@@ -12,7 +12,9 @@ feature "new user signs up for account" do
   scenario "user creates account" do
 
     visit root_path
-    click_link "Sign up"
+    within('div.top-bar-left') do
+      click_link "Sign up"
+    end
 
     fill_in "Email", with: "abc@def.com"
     fill_in "Password", with: "Password"
@@ -25,7 +27,9 @@ feature "new user signs up for account" do
   scenario "user fills out form incorrectly" do
 
     visit root_path
-    click_link "Sign up"
+    within('nav.title-bar') do
+      click_link "Sign up"
+    end
 
     click_button "Sign up"
     expect(page).to have_content "Email can't be blank"
@@ -36,7 +40,9 @@ feature "new user signs up for account" do
     @user = FactoryGirl.create(:user)
 
     visit root_path
-    click_link "Sign up"
+    within('div.top-bar-left') do
+      click_link "Sign up"
+    end
 
     fill_in "Email", with: @user.email
     fill_in "Password", with: @user.password

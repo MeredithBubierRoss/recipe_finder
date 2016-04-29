@@ -1,0 +1,23 @@
+$purple: #7a344d;
+$off-white: #d8d6db;
+$white: #fefefe;
+
+.title-bar {
+  background-color: $purple;
+  color: $white;
+  padding: 0;
+
+  .button {
+    margin-bottom: 8px;
+    margin-top: 8px;
+  }
+
+  #mobile-dropdown {
+    background-color: $purple;
+
+  }
+
+  a {
+    color: $off-white;
+  }
+}

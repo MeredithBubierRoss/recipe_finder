@@ -12,7 +12,7 @@ feature "user searches cookbook by ingredient and prep time" do
   scenario "user visits cookbook" do
     visit recipes_path
 
-    expect(page).to have_content "Available Recipes"
+    expect(page).to have_content "The Cookbook"
   end
 
   scenario "user searches cookbook by ingredient and prep time" do

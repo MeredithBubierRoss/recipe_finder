@@ -1,5 +1,6 @@
 $purple: #7a344d;
 $hover-purple: #61293d;
+$white: #fefefe;
 
 .welcome {
   padding: 30px;
@@ -7,6 +8,7 @@ $hover-purple: #61293d;
 
 .button {
   background-color: $purple;
+  color: $white;
 }
 
 .button:hover {

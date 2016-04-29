@@ -1,20 +1,18 @@
-<h1><%= @recipe.name %></h1>
+<div class="panel">
+  <h1><%= @recipe.name %></h1>
 
-<ul>
-  <% list = @recipe.ingredients %>
-  <% list.each do |ingredient| %>
-    <li><%= ingredient %></li>
-  <% end %>
-</ul>
+  <ul>
+    <% list = @recipe.ingredients %>
+    <% list.each do |ingredient| %>
+      <li><%= ingredient %></li>
+    <% end %>
+  </ul>
 
-Like what you see? Get more info here:<br />
-<div class="api_info">
-  <h3><%= link_to @recipe.name, @recipe.attribution.url %></br></h3>
-</div>
+  Like what you see? Get more info here:<br />
+  <div class="api_info">
+    <h3><%= link_to @recipe.name, @recipe.attribution.url %></br></h3>
+  </div>
 
-<%= @recipe.attribution.text %><br>
-<img src="http://static.yummly.com/api-logo.png"></img>
-<br />
-<div class="nav_links">
-  <%= link_to "Home", root_path %>
+  <%= @recipe.attribution.text %><br>
+  <img src="http://static.yummly.com/api-logo.png"></img>
 </div>

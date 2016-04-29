@@ -1,0 +1,26 @@
+$purple: #7a344d;
+$off-white: #d8d6db;
+$white: #fefefe;
+
+@media only screen and (min-width: 40rem) {
+
+  .top-bar {
+    background-color: $purple;
+    color: $white;
+
+    a {
+      color: $off-white;
+      font-size: 10;
+    }
+  }
+
+  .top-bar-left {
+    align-items: center;
+  }
+
+  .top-bar-right {
+    a {
+      padding: 10px;
+    }
+  }
+}

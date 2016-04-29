@@ -26,6 +26,14 @@
         1,
         8,
         null,
+<<<<<<< HEAD
+=======
+        null,
+        1,
+        13,
+        0,
+        null,
+>>>>>>> 76d505e04de8c227d61dd0bf170d3dc021a52a80
         null
       ],
       "/Users/meredith/challenges/onsite/breakable_toy/recipe_finder/app/controllers/welcome_controller.rb": [
@@ -38,13 +46,24 @@
         null,
         1,
         null,
+<<<<<<< HEAD
         1,
         null,
+=======
+>>>>>>> 76d505e04de8c227d61dd0bf170d3dc021a52a80
         1,
         31,
         null,
         null,
         null,
+<<<<<<< HEAD
+=======
+        1,
+        37,
+        null,
+        null,
+        null,
+>>>>>>> 76d505e04de8c227d61dd0bf170d3dc021a52a80
         null,
         1,
         null
@@ -52,13 +71,18 @@
       "/Users/meredith/challenges/onsite/breakable_toy/recipe_finder/app/controllers/recipes_controller.rb": [
         1,
         1,
+<<<<<<< HEAD
         29,
         29,
         2,
+=======
+        27,
+>>>>>>> 76d505e04de8c227d61dd0bf170d3dc021a52a80
         27,
         2,
         25,
         2,
+<<<<<<< HEAD
         2,
         null,
         23,
@@ -72,6 +96,30 @@
         1,
         2,
         null,
+=======
+        23,
+        2,
+        2,
+        null,
+        21,
+>>>>>>> 76d505e04de8c227d61dd0bf170d3dc021a52a80
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        null,
+        null,
+        1,
+        13,
+        null,
+        null,
+        1,
+        2,
+        null,
         null,
         1,
         2,
@@ -83,11 +131,19 @@
         null,
         1,
         1,
+        1,
+        null,
+        null,
         null,
         null,
         null,
         1,
+<<<<<<< HEAD
         3,
+=======
+        0,
+        null,
+>>>>>>> 76d505e04de8c227d61dd0bf170d3dc021a52a80
         null,
         null,
         1,
@@ -97,13 +153,29 @@
         1,
         null,
         0,
+        0,
+        0,
+        0,
         null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         1,
         null,
         1,
+<<<<<<< HEAD
         3,
+=======
+        2,
+>>>>>>> 76d505e04de8c227d61dd0bf170d3dc021a52a80
         null,
         null
       ],
@@ -114,7 +186,11 @@
         null,
         null,
         1,
+<<<<<<< HEAD
         6,
+=======
+        8,
+>>>>>>> 76d505e04de8c227d61dd0bf170d3dc021a52a80
         null,
         null
       ],
@@ -135,6 +211,10 @@
         0
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1461779221
+=======
+    "timestamp": 1461958435
+>>>>>>> 76d505e04de8c227d61dd0bf170d3dc021a52a80
   }
 }

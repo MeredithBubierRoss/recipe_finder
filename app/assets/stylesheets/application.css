@@ -20,10 +20,9 @@
   height: 100%;
   width: 100%;
   background-image: url('app_background2.png');
-}
-
-ul {
-  list-style-type: none;
+  -moz-text-size-adjust: 20%;
+  -webkit-text-size-adjust: 20%;
+  -ms-text-size-adjust: 20%;
 }
 
 .notice {
@@ -36,4 +35,9 @@ ul {
   background-color: #b02542;
   color: #ffffff;
   padding-left: 25px;
+}
+
+.panel {
+  background-color: rgba(254, 254, 254, 0.8);
+  padding: 15px;
 }

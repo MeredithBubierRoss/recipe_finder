@@ -13,13 +13,49 @@
   </head>
 
   <body class="bg-splash">
-    <div id="user_nav">
-      <% if user_signed_in? %>
-        Signed in as <%= link_to current_user.email, user_path(current_user) %>. Not you?
-        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-      <% else %>
-        <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-      <% end %>
+
+    <nav class="title-bar transparent show-for-small-only" data-responsive-toggle="nav-menu" data-hide-for="medium">
+      <button class="button" type="button" data-toggle="mobile-dropdown">Menu</button>
+      <div class="dropdown-pane" id="mobile-dropdown" data-dropdown data-auto-focus="true">
+        <div class="row">
+          <div class="medium-6 columns">
+            <ul>
+              <% if (!current_page?(root_path)) %>
+                <li><%= link_to "Home", root_path %></li>
+              <% end %>
+              <% if (!current_page?(recipes_path)) %>
+                <li><%= link_to "Recipe List", recipes_path %></li>
+              <% end %>
+              <% if user_signed_in? %>
+                <li><%= link_to 'Your Profile', user_path(current_user) %></li>
+                <li><%= link_to 'Sign Out', destroy_user_session_path, confirm: 'You sure?' %></li>
+              <% elsif !(current_page?(controller: 'devise/registrations', action: 'new') or current_page?(controller: 'devise/sessions', action: 'new')) %>
+                <li><%= link_to 'Sign in', new_user_session_path %></li>
+                <li><%= link_to 'Sign up', new_user_registration_path %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="top-bar transparent hide-for-small-only" id="nav-menu">
+      <div class="top-bar-left hide-for-small-only">
+        <% if user_signed_in? %>
+          Signed in as <%= link_to current_user.email, user_path(current_user) %>. Not you?
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+        <% end %>
+      </div>
+      <div class="top-bar-right hide-for-small-only">
+        <% if (!current_page?(recipes_path)) %>
+          <%= link_to "Recipe List", recipes_path %>
+        <% end %>
+        <% if (!current_page?(root_path)) %>
+          <%= link_to "Home", root_path %>
+        <% end %>
+      </div>
     </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

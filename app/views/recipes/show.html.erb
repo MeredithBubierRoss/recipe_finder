@@ -1,5 +1,7 @@
 <div class="panel">
-  <h2><%= @recipe.name %></h2><br/>
+  <h2><%= @recipe.name %></h2>
+  Contributed by <%= @recipe.user.email %><br>
+  <br>
   Total time: <%= @recipe.duration %></br>
   <% if !@recipe.servings.blank? %>
     Serves:

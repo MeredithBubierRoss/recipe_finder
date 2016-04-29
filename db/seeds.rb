@@ -41,4 +41,26 @@ Recipe.create(name: "Dairy Free Buffalo Chicken Meatballs", ingredients: "8 oz
   outside is firm and just beginning to brown, about 6-8 minutes. Transfer
   meatballs to slow cooker, cover, and cook on low for 2 hours. Skim excess fat
   off the top and leave meatballs in slow cooker set to the “warm” setting.
-  Serve with blue cheese dressing and rolls.")
+  Serve with blue cheese dressing and rolls.", duration: "4 hours", user_id: 1)
+Recipe.create(name: "Pumpkin Pie", ingredients: "3/4 c light brown sugar; 1/2 tsp
+  salt; 1 t cinnamon; 1/2 t ground ginger; 1/4 t ground cloves; 2 eggs; 1 15oz
+  can solid pack pumpkin; 1 12oz can evaporated milk", instructions: "In small bowl,
+  combine sugar, salt, spices. Beat eggs in a large bowl, then add pumpkin, milk,
+  and spices. Stir, then pour into pie shell (homemade or frozen, either will work
+  just fine). Bake at 425 F for 15 minutes, then reduce temp to 350 F and bake for
+  45 minutes, or until firm.", duration: "1 hour 30 minutes", servings: 8,
+  user_id: 1)
+Recipe.create(name: "Fetuccine Alfredo", ingredients: "1 pound fetuccine; 1 pint
+  heavy cream; 1/2 cup unsalted butter, softened; 1 cup freshly grated Parmigiano
+  Reggiano; Freshly cracked black pepper; Chopped fresh flat-leaf parsley, for
+  garnish", instructions: " Heat heavy cream over low-med heat in a deep saute
+  pan. Add butter and whisk gently to melt. Sprinkle in cheese and stir to
+  incorporate. Season with freshly cracked black pepper.", duration: "1 hour",
+  servings: 4, user_id: 1)
+Recipe.create(name: "Barbecue Chicken Pizza", ingredients: "1 cup shredded
+  roast/bbq chicken (store-bought or leftover); 1 cup barbecue sauce; 1 prebaked
+  12 inch pizza crust; 1/4 cup chopped scallions (mostly green); 3/4 cup grated
+  mozzarella", instructions: "Preheat oven to 450 F. Mix 1 cup chicken with 3/4
+  cup barbecue sauce. Brush 1/4 cup sauce over pizza crust. Scatter chicken pieces
+  and scallions on top of crust, sprinkle cheese evenly over pizza. Bake about
+  10 minutes, till chicken is warmed through.", duration: "20 minutes", user_id: 1)

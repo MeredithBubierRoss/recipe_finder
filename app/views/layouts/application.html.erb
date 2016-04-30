@@ -27,7 +27,7 @@
                 <li><%= link_to "Recipe List", recipes_path %></li>
               <% end %>
               <% if (!current_page?(ingredients_path)) %>
-                <li><%= link_to "Find Something New" %></li>
+                <li><%= link_to "Find Something New", ingredients_path %></li>
               <% end %>
               <% if user_signed_in? %>
                 <li><%= link_to 'Your Profile', user_path(current_user) %></li>
@@ -53,7 +53,7 @@
       </div>
       <div class="top-bar-right hide-for-small-only">
         <% if (!current_page?(ingredients_path)) %>
-          <%= link_to "Find Something New" %>
+          <%= link_to "Find Something New", ingredients_path %>
         <% end %>
         <% if (!current_page?(recipes_path)) %>
           <%= link_to "Recipe List", recipes_path %>

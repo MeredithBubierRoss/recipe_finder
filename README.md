@@ -22,16 +22,16 @@ and combining that with a want to use up what might already be at home, the user
 search options:
 
 * The user can do a streamlined search of the internet through the Yummly API. This
-allows users to enter whatever search parameters in a single search field, and Yummly
+allows users to enter either or both search parameters in a single search field, and Yummly
 will bring back recipes sourced from multiple recipe websites to a single results
 page.
 
-* The user can search a user-sourced cookbook. Signing up for an accout gives a user
+* The user can search a user-sourced cookbook. Signing up for an account gives a user
 the ability to add to the cookbook, edit recipes they have added, and delete recipes
 they want to remove from the cookbook. Searches can be conducted on an ingredient,
 a prep time, or both by filling in the appropriate fields on the search form.
 
-Styling for SupperTime has been kept intentionally minimal to allow for an easy trainsition
+Styling for SupperTime has been kept intentionally minimal to allow for an easy transition
 from desktop to mobile, making meal planning on the fly (like in the grocery store
 on the way home) easy to do. Users can always have their personal cookbook on them, so even if
 they aren't on a time crunch, they know exactly what they need to buy to satisfy their

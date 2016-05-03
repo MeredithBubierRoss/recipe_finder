@@ -1,6 +1,10 @@
 <div class="panel">
   <h1><%= @recipe.name %></h1>
-
+  <% recipe = @recipe.json %>
+  <% source = recipe["source"] %>
+  Courtesy of:
+  <%= source["sourceDisplayName"] %>, <%= link_to source["sourceSiteUrl"], source["sourceSiteUrl"] %>
+  <br><br>
   <ul>
     <% list = @recipe.ingredients %>
     <% list.each do |ingredient| %>

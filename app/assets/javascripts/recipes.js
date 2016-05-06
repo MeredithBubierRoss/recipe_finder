@@ -1,11 +1,11 @@
-$(function()) {
-  $('form#new_recipe').submit(function(event)) {
+$(function() {
+  $('form#new_recipe').submit(function(event) {
     event.preventDefault();
     var newRecipeContent = $('#recipe_content').val();
     var newRecipe = {
       recipe: {
         content: newRecipeContent
-      }
+      });
     };
 
     var request = $.ajax({
@@ -18,11 +18,10 @@ $(function()) {
       var html = '<div class ='callout success'>' +
         newRecipeContent +
         '</div>';
-
       $('div.recipes').append(html);
       $('#recipe_content').val('');
     });
-  };
+  });
 };
 
 $(function() {
@@ -32,7 +31,7 @@ $(function() {
     var editRecipe = {
       recipe: {
         content: editRecipeContent
-      }
+      };
     };
 
   var request = $.ajax({
@@ -43,7 +42,8 @@ $(function() {
 
   request.done(function() {
     var html = '<div class ='callout success'>' +
-      editRecipeContent + '</div>';
+      editRecipeContent +
+      '</div>';
       $('div.recipes').append(html);
       $('#recipe_content').val('');
     });

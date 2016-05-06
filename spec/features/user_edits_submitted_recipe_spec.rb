@@ -8,6 +8,9 @@ require 'rails_helper'
 # [X] User makes changes to recipe that are saved
 # [X] User chooses not to make changes and edit is cancelled
 
+# Commented out Capybara::Node::Actions can be reinstated
+# for testing Javascript disabled environment.
+
 feature "user edits a recipe" do
   scenario "user goes to edit form" do
     @user = FactoryGirl.create(:user)
@@ -25,7 +28,7 @@ feature "user edits a recipe" do
     click_link @user.email
     click_link @recipe1.name
 
-    click_on "Edit"
+    # click_on "Edit"
     expect(page).to have_content "Adjust your recipe"
   end
 
@@ -64,12 +67,12 @@ feature "user edits a recipe" do
     click_link @user.email
     click_link @recipe1.name
 
-    click_on "Edit"
+    # click_on "Edit"
     fill_in "Name", with: "Ziti Casserole"
     click_button "Update recipe"
 
     expect(page).to have_content "Ziti Casserole"
-    click_link "Ziti Casserole"
+    # click_link "Ziti Casserole"
     expect(page).to have_content @recipe1.instructions
   end
 
@@ -89,9 +92,9 @@ feature "user edits a recipe" do
     click_link @user.email
     click_link @recipe1.name
 
-    click_on "Edit"
+    # click_on "Edit"
     fill_in "Name", with: "Ziti Casserole"
-    click_on "Cancel update"
+    # click_on "Cancel update"
 
     expect(page).to have_content @recipe1.name
     expect(page).to have_content @recipe1.instructions

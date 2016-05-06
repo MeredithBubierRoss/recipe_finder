@@ -1,6 +1,7 @@
 $purple: #7a344d;
 $off-white: #d8d6db;
 $white: #fefefe;
+$hover-grey: #acabaf;
 
 .title-bar {
   background-color: $purple;
@@ -19,5 +20,9 @@ $white: #fefefe;
 
   a {
     color: $off-white;
+  }
+
+  a:hover {
+    color: $hover-grey
   }
 }

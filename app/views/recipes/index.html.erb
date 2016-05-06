@@ -5,7 +5,32 @@
 
   <div class="recipe_header_links">
     <% if user_signed_in? %>
-      <%= link_to 'Add a new recipe', new_recipe_path %>
+      <!-- <%= link_to 'Add a new recipe', new_recipe_path %> -->
+      <p><a data-open="newRecipe">Add a new recipe</a></p>
+      <div class="reveal" id="newRecipe" data-reveal>
+        <h2>Add a new Recipe</h2>
+        <%= form_for Recipe.new do |f| %>
+          <%= f.label :name %><br />
+          <%= f.text_field :name, placeholder: "Recipe Name" %>
+
+          <%= f.label :ingredients, "Ingredients (separated with a semicolon)" %><br />
+          <%= f.text_area :ingredients, placeholder: "Ingredient List (separate with a semicolon (ex.: 1 lb. bacon (chopped); 1 tb thyme))" %>
+
+          <%= f.label :instructions %><br />
+          <%= f.text_area :instructions, placeholder: "Instructions" %>
+
+          <%= f.label :duration %><br />
+          <%= f.text_field :duration, placeholder: "Total Time" %>
+
+          <%= f.label :servings %><br />
+          <%= f.text_field :servings, placeholder: "Total servings" %>
+
+          <%= f.submit "Add recipe", class: "button" %>
+        <% end %>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
     <% end %>
   </div>
   <br><br>

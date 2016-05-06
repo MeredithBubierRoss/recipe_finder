@@ -5,8 +5,8 @@ $(function() {
     var newRecipe = {
       recipe: {
         content: newRecipeContent
-      });
-    };
+      };
+    });
 
     var request = $.ajax({
       method: 'POST',
@@ -15,9 +15,7 @@ $(function() {
     });
 
     request.done(function() {
-      var html = '<div class ='callout success'>' +
-        newRecipeContent +
-        '</div>';
+      var html = '<div class ='callout success'>' + newRecipeContent + '</div>';
       $('div.recipes').append(html);
       $('#recipe_content').val('');
     });
@@ -41,9 +39,7 @@ $(function() {
   });
 
   request.done(function() {
-    var html = '<div class ='callout success'>' +
-      editRecipeContent +
-      '</div>';
+    var html = '<div class ='callout success'>' + editRecipeContent + '</div>';
       $('div.recipes').append(html);
       $('#recipe_content').val('');
     });

@@ -49,9 +49,12 @@ Download instructions
 
 `rake db:migrate`
 
+Updates
+-------
+* Ajax responses for adding and editing recipes for a faster user experience.
+
 Future Features
 ---------------
-* Ajax responses for adding and editing recipes for a faster user experience.
 * Users can favorite recipes and see a list of what they've favorited
 * Users can privatize certain recipes as "Family Secrets". These should be unavailable
 to search in the global cookbook, but the user can access in their personal collection.

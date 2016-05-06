@@ -1,5 +1,5 @@
 $(function()) {
-  $("form#new_recipe").submit(function(event)) {
+  $('form#new_recipe').submit(function(event)) {
     event.preventDefault();
     var newRecipeContent = $('#recipe_content').val();
     var newRecipe = {
@@ -9,24 +9,24 @@ $(function()) {
     };
 
     var request = $.ajax({
-      method: "POST",
+      method: 'POST',
       data: newRecipe,
-      url: "/recipes/new"
+      url: '/recipes/new'
     });
 
     request.done(function() {
-      var html = "<div class ='callout success'>" +
+      var html = '<div class ='callout success'>' +
         newRecipeContent +
-        "</div>";
+        '</div>';
 
-      $("div.recipes").append(html);
-      $('#recipe_content').val("");
+      $('div.recipes').append(html);
+      $('#recipe_content').val('');
     });
   };
 };
 
-$(function()) {
-  $("form#edit_recipe").submit(function(event)) {
+$(function() {
+  $('form#edit_recipe').submit(function(event)) {
     event.preventDefault();
     var editRecipeContent = $('#recipe_content').val();
     var editRecipe = {
@@ -35,21 +35,19 @@ $(function()) {
       }
     };
 
-    var request = $.ajax({
-      method: "POST",
-      data: editRecipe,
-      url: "/recipes/:id/edit"
-    });
+  var request = $.ajax({
+    method: 'POST',
+    data: editRecipe,
+    url: '/recipes/:id/edit'
+  });
 
-    request.done(function() {
-      var html = "<div class ='callout success'>" +
-        editRecipeContent +
-        "</div>";
-
-      $("div.recipes").append(html);
-      $('#recipe_content').val("");
+  request.done(function() {
+    var html = '<div class ='callout success'>' +
+      editRecipeContent + '</div>';
+      $('div.recipes').append(html);
+      $('#recipe_content').val('');
     });
-  };
+  });
 };
 
 var $modal = $('#modal');

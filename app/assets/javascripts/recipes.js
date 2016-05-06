@@ -1,11 +1,11 @@
 $(function() {
-  $('form#new_recipe').submit(function(event)) {
+  $('form#new_recipe').submit(function(event) {
     event.preventDefault();
     var newRecipeContent = $('#recipe_content').val();
     var newRecipe = {
       recipe: {
-        content: newRecipeContent
-      };
+        content: newRecipeContent;
+      });
     };
 
     var request = $.ajax({
@@ -23,13 +23,13 @@ $(function() {
 };
 
 $(function() {
-  $('form#edit_recipe').submit(function(event)) {
+  $('form#edit_recipe').submit(function(event) {
     event.preventDefault();
     var editRecipeContent = $('#recipe_content').val();
     var editRecipe = {
       recipe: {
-        content: editRecipeContent
-      };
+        content: editRecipeContent;
+      });
     };
 
   var request = $.ajax({

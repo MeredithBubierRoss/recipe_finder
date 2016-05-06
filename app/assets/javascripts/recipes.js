@@ -1,12 +1,12 @@
 $(function() {
-  $('form#new_recipe').submit(function(event) {
+  $('form#new_recipe').submit(function(event)) {
     event.preventDefault();
     var newRecipeContent = $('#recipe_content').val();
     var newRecipe = {
       recipe: {
         content: newRecipeContent
       };
-    });
+    };
 
     var request = $.ajax({
       method: 'POST',

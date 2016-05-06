@@ -1,11 +1,11 @@
 $(function() {
-  $('form#new_recipe').submit(function(event) {
+  $('form#new_recipe').submit(function(event)) {
     event.preventDefault();
     var newRecipeContent = $('#recipe_content').val();
     var newRecipe = {
       recipe: {
         content: newRecipeContent;
-      });
+      };
     };
 
     var request = $.ajax({
@@ -19,17 +19,17 @@ $(function() {
       $('div.recipes').append(html);
       $('#recipe_content').val('');
     });
-  });
-};
+  };
+});
 
 $(function() {
-  $('form#edit_recipe').submit(function(event) {
+  $('form#edit_recipe').submit(function(event)) {
     event.preventDefault();
     var editRecipeContent = $('#recipe_content').val();
     var editRecipe = {
       recipe: {
         content: editRecipeContent;
-      });
+      };
     };
 
   var request = $.ajax({
@@ -43,8 +43,8 @@ $(function() {
       $('div.recipes').append(html);
       $('#recipe_content').val('');
     });
-  });
-};
+  };
+});
 
 var $modal = $('#modal');
 

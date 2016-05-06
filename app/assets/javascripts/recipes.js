@@ -15,7 +15,7 @@ $(function () {
             });
 
         request.done(function () {
-            var html = '<div class ='callout success'>' + newRecipeContent + '</div>';
+            var html = newRecipeContent;
             $('div.recipes').append(html);
             $('#recipe_content').val('');
         });
@@ -39,7 +39,7 @@ $(function () {
             });
 
         request.done(function () {
-            var html = '<div class ='callout success'>' + editRecipeContent + '</div>';
+            var html = editRecipeContent;
             $('div.recipes').append(html);
             $('#recipe_content').val('');
         });

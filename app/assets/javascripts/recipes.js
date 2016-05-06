@@ -4,7 +4,7 @@ $(function() {
     var newRecipeContent = $('#recipe_content').val();
     var newRecipe = {
       recipe: {
-        content: newRecipeContent;
+        content: newRecipeContent
       };
     };
 
@@ -28,7 +28,7 @@ $(function() {
     var editRecipeContent = $('#recipe_content').val();
     var editRecipe = {
       recipe: {
-        content: editRecipeContent;
+        content: editRecipeContent
       };
     };
 

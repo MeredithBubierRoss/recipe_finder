@@ -8,6 +8,9 @@ require 'rails_helper'
 # [X] User adds a new recipe to the public cookbook
 # [X] User fills out form incorrectly, sees error messages
 
+# Commented out Capybara::Node::Actions can be reinstated for
+# testing Javascript disabled environment
+
 feature "authenticated user adds a new recipe" do
   scenario "authenticated user adds recipe" do
     @user = FactoryGirl.create(:user)
@@ -18,7 +21,7 @@ feature "authenticated user adds a new recipe" do
     visit root_path
 
     click_link "cookbook"
-    click_link "Add a new recipe"
+    # click_link "Add a new recipe"
 
     fill_in "Name", with: @recipe.name
     fill_in "Instructions", with: @recipe.instructions

@@ -42,7 +42,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     if @recipe.update_attributes(recipe_params)
       flash[:notice] = "Recipe updated!"
-      redirect_to recipes_path
+      redirect_to recipe_path
     else
       render :edit
     end

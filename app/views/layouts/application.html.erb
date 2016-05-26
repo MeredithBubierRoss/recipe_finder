@@ -7,6 +7,9 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "Supper Time!" %></title>
 
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation/foundation.js"></script>
+    <script src="js/foundation/foundation.reveal.js"></script>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -70,5 +73,8 @@
         <%= yield %>
       </div>
     </div>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>

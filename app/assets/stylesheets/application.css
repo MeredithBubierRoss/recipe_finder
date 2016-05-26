@@ -41,3 +41,11 @@
   background-color: rgba(254, 254, 254, 0.8);
   padding: 15px;
 }
+
+a {
+  color: #7a344d;
+}
+
+a:hover {
+  color: #61293d
+}

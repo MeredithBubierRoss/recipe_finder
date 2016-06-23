@@ -4,11 +4,18 @@ require 'rails_helper'
 # I want to delete a recipe I wrote
 # Because I want to take it out of the cookbook
 #
-# [] User only sees delete on recipes they have written
+# [X] User only sees delete on recipes they have written
 # [X] User selects recipe to delete
 # [X] User deletes recipe
 
 feature "user deletes a recipe they wrote" do
+  before(:each) do
+    @user = FactoryGirl.create(:user)
+    @recipe1 = FactoryGirl.create(:recipe, user: @user)
+    @recipe2 = FactoryGirl.create(:recipe, user: @user)
+    @recipe3 = FactoryGirl.create(:recipe, user: @user)
+  end
+
   scenario "user can only delete recipe they wrote" do
     @user1 = FactoryGirl.create(:user)
     @user2 = FactoryGirl.create(:user)
@@ -29,11 +36,6 @@ feature "user deletes a recipe they wrote" do
   end
 
   scenario "user selects a recipe to delete" do
-    @user = FactoryGirl.create(:user)
-    @recipe1 = FactoryGirl.create(:recipe, user: @user)
-    @recipe2 = FactoryGirl.create(:recipe, user: @user)
-    @recipe3 = FactoryGirl.create(:recipe, user: @user)
-
     visit root_path
 
     click_link "sign in"
@@ -53,11 +55,6 @@ feature "user deletes a recipe they wrote" do
   end
 
   scenario "user deletes recipe" do
-    @user = FactoryGirl.create(:user)
-    @recipe1 = FactoryGirl.create(:recipe, user: @user)
-    @recipe2 = FactoryGirl.create(:recipe, user: @user)
-    @recipe3 = FactoryGirl.create(:recipe, user: @user)
-
     visit root_path
 
     click_link "sign in"

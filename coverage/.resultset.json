@@ -8,13 +8,23 @@
         1,
         null,
         1,
+        1,
+        1,
         null
       ],
       "/Users/meredith/challenges/onsite/breakable_toy/recipe_finder/app/helpers/application_helper.rb": [
         1,
         null
       ],
+      "/Users/meredith/challenges/onsite/breakable_toy/recipe_finder/app/models/favorite.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/meredith/challenges/onsite/breakable_toy/recipe_finder/app/models/recipe.rb": [
+        1,
+        1,
         1,
         1,
         null,
@@ -41,7 +51,7 @@
         1,
         null,
         1,
-        37,
+        43,
         null,
         null,
         null,
@@ -52,21 +62,21 @@
       "/Users/meredith/challenges/onsite/breakable_toy/recipe_finder/app/controllers/recipes_controller.rb": [
         1,
         1,
-        29,
-        29,
+        32,
+        32,
         2,
-        27,
+        30,
         2,
-        25,
+        28,
         2,
         2,
         null,
-        23,
+        26,
         null,
         null,
         null,
         1,
-        14,
+        19,
         null,
         null,
         1,
@@ -121,7 +131,32 @@
         null,
         null,
         1,
-        8,
+        9,
+        9,
+        null,
+        null
+      ],
+      "/Users/meredith/challenges/onsite/breakable_toy/recipe_finder/app/controllers/favorite_recipes_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
         null,
         null
       ],
@@ -142,6 +177,6 @@
         0
       ]
     },
-    "timestamp": 1463076158
+    "timestamp": 1466710760
   }
 }

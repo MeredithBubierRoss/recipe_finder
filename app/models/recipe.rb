@@ -1,5 +1,7 @@
 class Recipe < ActiveRecord::Base
   belongs_to :user
+  has_many :favorites, as: :favorited
+  has_many :users, through: :favorites, source: :user
 
   validates :name, presence: true
   validates :instructions, presence: true

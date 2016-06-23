@@ -12,11 +12,13 @@ require 'rails_helper'
 # for testing Javascript disabled environment.
 
 feature "user edits a recipe" do
-  scenario "user goes to edit form" do
+  before(:each) do
     @user = FactoryGirl.create(:user)
     @recipe1 = FactoryGirl.create(:recipe, user: @user)
     @recipe2 = FactoryGirl.create(:recipe, user: @user)
+  end
 
+  scenario "user goes to edit form" do
     visit root_path
 
     click_link "sign in"
@@ -52,10 +54,6 @@ feature "user edits a recipe" do
   end
 
   scenario "user edits a recipe" do
-    @user = FactoryGirl.create(:user)
-    @recipe1 = FactoryGirl.create(:recipe, user: @user)
-    @recipe2 = FactoryGirl.create(:recipe, user: @user)
-
     visit root_path
 
     click_link "sign in"
@@ -77,10 +75,6 @@ feature "user edits a recipe" do
   end
 
   scenario "user changes mind mid edit" do
-    @user = FactoryGirl.create(:user)
-    @recipe1 = FactoryGirl.create(:recipe, user: @user)
-    @recipe2 = FactoryGirl.create(:recipe, user: @user)
-
     visit root_path
 
     click_link "sign in"

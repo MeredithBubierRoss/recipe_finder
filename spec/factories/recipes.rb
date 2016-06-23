@@ -5,5 +5,6 @@ FactoryGirl.define do
     ingredients "Ziti, cheese, sauce"
     duration "1 hour"
     servings 8
+    user
   end
 end

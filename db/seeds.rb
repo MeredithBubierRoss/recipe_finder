@@ -1,5 +1,7 @@
 User.create(email: "test@test.com", password: "password", password_confirmation:
   "password")
+User.create(email: "test2@test.com", password: "password", password_confirmation:
+  "password")
 Recipe.create(name: "Sticky Lemon Chicken (adjusted from Gordon Ramsay)",
   ingredients: "1 lb chicken tenderloins, cut into bite size pieces; salt and
   pepper; 3-4 Tb olive oil; 1 head of garlic, minced or pressed; A few thyme
@@ -64,3 +66,7 @@ Recipe.create(name: "Barbecue Chicken Pizza", ingredients: "1 cup shredded
   cup barbecue sauce. Brush 1/4 cup sauce over pizza crust. Scatter chicken pieces
   and scallions on top of crust, sprinkle cheese evenly over pizza. Bake about
   10 minutes, till chicken is warmed through.", duration: "20 minutes", user_id: 1)
+Favorite.create(user_id: 1, favorited_id: 1)
+Favorite.create(user_id: 1, favorited_id: 3)
+Favorite.create(user_id: 2, favorited_id: 1)
+Favorite.create(user_id: 2, favorited_id: 4)

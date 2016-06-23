@@ -1,4 +1,5 @@
 <div class="panel">
+  <% if user_signed_in? %>
   <h5>Your profile, <%= @user.email %><br></h5>
   <% @recipes = Recipe.where(user: @user.id) %>
   <div class="user_recipes">
@@ -10,5 +11,15 @@
         <li><%= link_to recipe.name, recipe %> (<%= recipe.duration %>)</li>
       <% end %>
     </ul>
+    <h3>
+      Your favorite recipes
+    </h3>
+    <% @favorites.each do |favorite| %>
+      <li><%= link_to favorite.name, favorite %> (<%= favorite.duration %>)</li>
+    <% end %>
+  <% else %>
+    <h5>I'm sorry, you don't have access to this page.</h5>
+    Sign up <%= link_to 'here', new_user_registration_path %>.
+  <% end %>
   </div>
 </div>

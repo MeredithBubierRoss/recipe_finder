@@ -1,7 +1,14 @@
 <div class="panel">
   <h2><%= @recipe.name %></h2><br/>
   Total time: <%= @recipe.duration %></br>
-  <% if !@recipe.servings.blank? %>
+  <% if user_signed_in? %>
+    <% unless current_user.favorite_recipes.exists?(id: @recipe.id) %>
+      <%= link_to "Add to Favorites", favorite_recipes_path(recipe_id: @recipe), method: :post %>
+      <% else %>
+      <%= link_to "Remove from Favorites", favorite_recipe_path(@recipe), method: :delete %>
+      <% end %>
+    <% end %><br/>
+  <% unless @recipe.servings.blank? %>
     Serves:
     <%= @recipe.servings %><br />
   <% end %>

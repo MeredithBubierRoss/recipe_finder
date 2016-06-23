@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Recipe, type: :model do
+RSpec.describe Recipe, type: :model do
   it { should have_valid(:name).when("Pizza") }
   it { should_not have_valid(:name).when(nil, " ", "") }
 
@@ -12,4 +12,6 @@ describe Recipe, type: :model do
 
   it { should have_valid(:duration).when("45 minutes") }
   it { should_not have_valid(:duration).when(nil, " ", "") }
+
+  it { should belong_to(:user) }
 end

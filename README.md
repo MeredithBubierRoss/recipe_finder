@@ -51,11 +51,12 @@ Download instructions
 
 Updates
 -------
+* Users can favorite recipes and see a list of what they've favorited
 * Ajax responses for adding and editing recipes for a faster user experience.
 
 Future Features
 ---------------
-* Users can favorite recipes and see a list of what they've favorited
+
 * Users can privatize certain recipes as "Family Secrets". These should be unavailable
 to search in the global cookbook, but the user can access in their personal collection.
 * Users can upload photos to go with their recipes.
@@ -63,3 +64,6 @@ to search in the global cookbook, but the user can access in their personal coll
 cookbook by first name instead of email.
 * Mailer capability - recover lost passwords, get notifications if a favorite recipe is
 removed from the database.
+* Users can exclude allergy issues when searching internet recipes through API
+* Users can exclude allergy issues when searching public cookbook
+* Recipes are marked with submission information (what user submitted recipe)

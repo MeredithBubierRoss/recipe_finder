@@ -51,7 +51,7 @@
         1,
         null,
         1,
-        43,
+        46,
         null,
         null,
         null,
@@ -127,12 +127,14 @@
       "/Users/meredith/challenges/onsite/breakable_toy/recipe_finder/app/controllers/users_controller.rb": [
         1,
         1,
+        null,
+        1,
         0,
         null,
         null,
         1,
-        9,
-        9,
+        10,
+        10,
         null,
         null
       ],
@@ -177,6 +179,6 @@
         0
       ]
     },
-    "timestamp": 1466710760
+    "timestamp": 1466904991
   }
 }

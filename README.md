@@ -64,3 +64,6 @@ to search in the global cookbook, but the user can access in their personal coll
 cookbook by first name instead of email.
 * Mailer capability - recover lost passwords, get notifications if a favorite recipe is
 removed from the database.
+* Users can exclude allergy issues when searching internet recipes through API
+* Users can exclude allergy issues when searching public cookbook
+* Recipes are marked with submission information (what user submitted recipe)

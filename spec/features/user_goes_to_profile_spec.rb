@@ -7,7 +7,7 @@ require 'rails_helper'
 # [X] User logs into account
 # [X] User goes to profile page
 # [X] Unauthenticated user cannot access profiles
-# [] Authenticated user can only access personal profile
+# [X] Authenticated user can only access personal profile
 
 feature "user goes to profile" do
   scenario "user signs in, goes to profile" do

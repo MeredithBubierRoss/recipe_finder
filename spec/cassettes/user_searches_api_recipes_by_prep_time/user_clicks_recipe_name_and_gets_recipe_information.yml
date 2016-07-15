@@ -956,4 +956,73 @@ http_interactions:
         OjAuODMzMywiU2FsdHkiOjAuODMzM30sInJhdGluZyI6NH0=
     http_version: 
   recorded_at: Tue, 26 Apr 2016 17:29:24 GMT
+- request:
+    method: get
+    uri: http://api.yummly.com/v1/api/recipes?_app_id=1d959495&_app_key=3d5cc22a861f07f9b991e196e9193eec&q
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 06 Jul 2016 17:42:06 GMT
+      Server:
+      - nginx
+      X-Yummly-Request-Id:
+      - d3a2374f-b5e1-45a9-8d0b-cc9e65211db2
+      Content-Length:
+      - '3087'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"criteria":{"q":"","allowedIngredient":null,"excludedIngredient":null},"matches":[{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/zcBE_pIXxnn5G4W4poSZfwOfxirpShCf6hbhM3GsB-DSpd7AjvbVmOLh4t0Ck0fmPCbXdb8EZfEiN3CR2_Yg=s90-c"},"sourceDisplayName":"Confessions
+        of a Chopinholic","ingredients":["tea bags","honey","lemon","boiling water","cold
+        water","ice"],"id":"Honey-Lemon-Iced-Tea-1719408","smallImageUrls":["https://lh3.googleusercontent.com/ju2VdzyecDAJ-YtzZL9GXQOon_S1pmKUw9oDxh2xGTLUoj6aoW3jBLvco5H_jOaf1Sy2OcHRdit6QL9Hrffl=s90"],"recipeName":"Honey
+        Lemon Iced Tea","totalTimeInSeconds":900,"attributes":{"course":["Beverages"]},"flavors":null,"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/uf0AmNYo09d5zok5sRvCJyZz_Ih_xp7EV4BPVhqIJR621ts-DZcxsLKYAkiUXfCscouTjHhwEulPkYP_P4Pg=s90-c"},"sourceDisplayName":"Everyday
+        Diabetic Recipes","ingredients":["eggs","cream cheese","sugar","cream of tartar"],"id":"Cloud-Bread-1721440","smallImageUrls":["https://lh3.googleusercontent.com/LtwsXinZC4Z79k9zsjZioU02SM8c6tJuopHvwDdF04rkpy5xKDIIz7pNCA4I_t9BsQDJN8jbNoIysf_mBoIWvg=s90"],"recipeName":"Cloud
+        Bread","totalTimeInSeconds":3000,"attributes":{},"flavors":{"sweet":0.3333333333333333,"piquant":0.0,"sour":0.0,"salty":0.3333333333333333,"meaty":0.8333333333333334,"bitter":0.16666666666666666},"rating":3},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/BVX__0iGn1KnI1eoADjTVAjn2ENRuylhF61lX70tIOb8AJLSXtyuA1Yn43SLWYLyvZFvlX8OoGgqrAkyjUAm=s90-c"},"sourceDisplayName":"Butter
+        Be Ready","ingredients":["chicken breasts","pineapple","teriyaki sauce","cooked
+        white rice","olive oil"],"id":"Teriyaki-Chicken-Pineapple-Bowl-1719622","smallImageUrls":["https://lh3.googleusercontent.com/YEdBDW7eonU6CyieMr4AE2Dd7d9u6Tl0Jxxq5kMtCmmhNqjGL4A3bBnZ6yAVlpRAF9Hpo4wKecnmalTP7G5CqQ=s90"],"recipeName":"Teriyaki
+        Chicken Pineapple Bowl","totalTimeInSeconds":960,"attributes":{"course":["Main
+        Dishes"]},"flavors":null,"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/F5SwTGbHB3D38SufKK_nyhlcCMTPBfgv3xeNhqZZMJ9NjHbLd7ERBJoAy1v3gZgAvNcNj76IoHSpJuQXt9Gx=s90-c"},"sourceDisplayName":"Favorite
+        Family Recipes","ingredients":["small potatoes","butter","grated parmesan
+        cheese","garlic powder"],"id":"Parmesan-Baked-Potato-Halves-1722951","smallImageUrls":["https://lh3.googleusercontent.com/F0aIh2ocC7FZuHQ_kTYdvYKX658N1rKEwFQgUBwoWIMD_OM4bSUhIgmkElUQ_URdSsAKUk0pyb4VqaH3zNWuEwk=s90"],"recipeName":"Parmesan
+        Baked Potato Halves","totalTimeInSeconds":3300,"attributes":{},"flavors":null,"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/ebfk-ASFWrsJVjLMgh_twXDH9lQGWYDEpUZYzVoinxiHEuxAL-i3sCLeng2-svN5MqyQ9I4OwZRxA8ZqdS-7yXc=s90-c"},"sourceDisplayName":"From
+        Away","ingredients":["mozzarella string cheese","panko breadcrumbs","all-purpose
+        flour","eggs","canola oil"],"id":"Homemade-Fried-Mozzarella-Sticks-1723843","smallImageUrls":["https://lh3.googleusercontent.com/z7BvgreDDNQEEshFJUDzSPdcaBt11f1MOHR3XF7liHdE0ETLcbMvjkPT62PWURIrc3rWImDX4zcriq06AdGSsQ=s90"],"recipeName":"Homemade
+        Fried Mozzarella Sticks","totalTimeInSeconds":2400,"attributes":{"course":["Appetizers","Lunch"],"cuisine":["Kid-Friendly"]},"flavors":null,"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/QSvmcRaJESxm09gpLpD9tvSsGFsw27imifs4R05TDVSKcAoLoBmX-uq1j73mh6419IIS0T7njSd4su1IPr1FKA=s90-c"},"sourceDisplayName":"Pack
+        Momma","ingredients":["biscuits","melted butter","crumbled blue cheese"],"id":"Blue-Cheese-Pull-Apart-Biscuits-1721959","smallImageUrls":["https://lh3.googleusercontent.com/IdvCnRzaP74ljKhQU47m_aoZUWVlWyFOkgrDKqVVsVF6I0cEK4VGZq2NxxhkQSKA8fUJSJPq6UWve6Tl1nnGTg=s90"],"recipeName":"Blue
+        Cheese Pull Apart Biscuits","totalTimeInSeconds":2400,"attributes":{"course":["Breakfast
+        and Brunch","Breads"],"cuisine":["Kid-Friendly"]},"flavors":{"piquant":0.0,"meaty":0.8333333333333334,"bitter":0.8333333333333334,"sweet":0.16666666666666666,"sour":0.0,"salty":0.8333333333333334},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/J9is-U5XkmCu-8NiClWth8_TWT4EpjJDW0ozzQ5lO7LiTW_b6o6jpBw4qIcEszW_BHYe4eyyXJOe-0mM7yYXWA=s90-c"},"sourceDisplayName":"The
+        Seasoned Mom","ingredients":["honey graham","creamy peanut butter","bananas","cinnamon"],"id":"3-Ingredient-No-Bake-Toddler-Cookies-1723227","smallImageUrls":["https://lh3.googleusercontent.com/zSAUtrpr_3mOoRFXzu72N7h7ibwmCvpC77iPWyocrksvV-30k3lBW1ugoBXowjH8RWvaeU9w81dVqlZMOFSUEA=s90"],"recipeName":"3-Ingredient
+        No Bake Toddler Cookies","totalTimeInSeconds":1800,"attributes":{"course":["Desserts","Lunch"],"cuisine":["Kid-Friendly"]},"flavors":{"piquant":0.0,"meaty":0.6666666666666666,"bitter":0.8333333333333334,"sweet":0.8333333333333334,"sour":0.16666666666666666,"salty":0.8333333333333334},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/etE0gxYsnbAVhe4ZnBBT7tLbqdeWDNY95Uof68JE1-wcVzh6K10KGb9ftf2lVfzpis248l2IJBCTL6g5MdjcSA=s90-c"},"sourceDisplayName":"Betty
+        Crocker","ingredients":["eggs","ketchup","milk","Italian style breadcrumbs","finely
+        chopped onion","lean ground beef"],"id":"Home-Style-Meatloaf-1723659","smallImageUrls":["https://lh3.googleusercontent.com/VtiKPiJAJoAn0mtXsMvEMC-jq4bp5mo1ymECJwv-hWtAfmCxsbQYaLcHMrbKgE_wRU6xEvqESts5g0DANKFwFw=s90"],"recipeName":"Home-Style
+        Meatloaf","totalTimeInSeconds":4800,"attributes":{"course":["Main Dishes"]},"flavors":{"piquant":0.0,"meaty":0.3333333333333333,"bitter":0.8333333333333334,"sweet":0.5,"sour":0.16666666666666666,"salty":0.8333333333333334},"rating":3},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/gfVvM8R_AQsWs2HOT823nbpeCstJcDXHrNjTqw3wSCjHRgt9iR3ibiGvDCElFtvWbsIhA4DFghuVCh0GnBaY=s90-c"},"sourceDisplayName":"Little
+        House Big Alaska","ingredients":["potatoes","green pepper","olive oil","barbecue
+        rub","smoked paprika","tomatoes","onion powder","fleur de sel"],"id":"Barbecued-Potatoes-on-the-Grill-1722365","smallImageUrls":["https://lh3.googleusercontent.com/TNnZXKIC4L2qfmEIOqk8SVHeWVHUtpzjFGopCaXwcC3rTbAb78G3H_au4h1KFTZSsz0wWrfoMABnb1gtsKTBECg=s90"],"recipeName":"Barbecued
+        Potatoes on the Grill","totalTimeInSeconds":2700,"attributes":{"course":["Side
+        Dishes"],"cuisine":["Barbecue"]},"flavors":{"piquant":0.3333333333333333,"meaty":0.16666666666666666,"bitter":0.16666666666666666,"sweet":0.16666666666666666,"sour":0.8333333333333334,"salty":0.16666666666666666},"rating":4},{"imageUrlsBySize":{"90":"https://lh3.googleusercontent.com/8k38CUnwhv3j7HAo9CiGW-bV_jlmGugAmrBTsJVMjxZ0602pweXIjRGzpb2iZzhXHDgdhxRUTxlyRviJIlu2=s90-c"},"sourceDisplayName":"Running
+        with Spoons","ingredients":["almond butter","bananas","large eggs","honey","rolled
+        oats","ground flaxseed","vanilla extract","baking soda","jelly"],"id":"Flourless-Almond-Butter-and-Jelly-Muffins-1715366","smallImageUrls":["https://lh3.googleusercontent.com/ZWk-7gByARJZSwrvG1HLLToEgG8AB-t26uYn3xTsRkX6f8TM2tE9MvSO6ndr8mW9DKXnVkdV8qS91wjDUMzafSs=s90"],"recipeName":"Flourless
+        Almond Butter and Jelly Muffins","totalTimeInSeconds":900,"attributes":{"course":["Breakfast
+        and Brunch","Breads","Lunch"]},"flavors":{"piquant":0.0,"meaty":0.6666666666666666,"bitter":0.6666666666666666,"sweet":0.8333333333333334,"sour":0.16666666666666666,"salty":0.16666666666666666},"rating":4}],"facetCounts":{},"totalMatchCount":1464871,"attribution":{"html":"Recipe
+        search powered by <a href=''http://www.yummly.com/recipes''><img alt=''Yummly''
+        src=''http://static.yummly.com/api-logo.png''/></a>","url":"http://www.yummly.com/recipes/","text":"Recipe
+        search powered by Yummly","logo":"http://static.yummly.com/api-logo.png"}}'
+    http_version: 
+  recorded_at: Wed, 06 Jul 2016 17:43:22 GMT
 recorded_with: VCR 3.0.1

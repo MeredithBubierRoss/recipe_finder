@@ -7,7 +7,7 @@
 ![Code Climate](https://codeclimate.com/github/MeredithBubierRoss/recipe_finder.png)
 ![Coverage Status](https://coveralls.io/repos/MeredithBubierRoss/recipe_finder/badge.png)
 
-This app is hosted on Heroku. (http://suppertime.herokuapp.com  )
+This app is hosted on Heroku. (http://suppertime.herokuapp.com)
 
 SupperTime lets a user search for recipes by ingredient, prep time, or both.
 If they are an authenticated user, they can add new recipes to the database, and
@@ -67,3 +67,4 @@ removed from the database.
 * Users can exclude allergy issues when searching internet recipes through API
 * Users can exclude allergy issues when searching public cookbook
 * Recipes are marked with submission information (what user submitted recipe)
+* Users can delete their accounts

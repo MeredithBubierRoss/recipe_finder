@@ -6,6 +6,7 @@ require 'rails_helper'
 #
 # [X] Unauthenticated user visits index, sees list of all recipes
 # [X] User clicks recipe name and is taken to recipe show page
+# [] Submitting user's information is visible in recipe
 
 feature "user goes to list of available recipes" do
   scenario "user sees list of recipes on index" do
@@ -22,17 +23,20 @@ feature "user goes to list of available recipes" do
   end
 
   scenario "user clicks recipe name and gets recipe details" do
-    pasta_sauce = Recipe.create(name: "Pasta and Sauce", ingredients: "Pasta and sauce",
+    user = FactoryGirl.create(:user)
+    recipe = Recipe.create(name: "Pasta and Sauce", ingredients: "Pasta and sauce",
       instructions: "Boil water, cook pasta, and drain. Pour
-      sauce from jar. Enjoy!", duration: "20 minutes")
+      sauce from jar. Enjoy!", duration: "20 minutes", user: user)
 
     visit recipes_path
 
     expect(page).to have_link "Pasta and Sauce"
 
-    click_on "Pasta and Sauce"
+    click_link "Pasta and Sauce"
 
-    expect(page).to have_content pasta_sauce.instructions
+    expect(page).to have_content recipe.instructions
+    expect(page).to have_content "Submitted by:"
+    expect(page).to have_content recipe.user.email
   end
 
   scenario "user returns to root from list" do

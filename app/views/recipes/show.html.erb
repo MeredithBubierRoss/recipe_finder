@@ -1,5 +1,6 @@
 <div class="panel">
   <h2><%= @recipe.name %></h2><br/>
+  Submitted by: <%= @recipe.user.email %></br>
   Total time: <%= @recipe.duration %></br>
   <% if user_signed_in? %>
     <% unless current_user.favorite_recipes.exists?(id: @recipe.id) %>

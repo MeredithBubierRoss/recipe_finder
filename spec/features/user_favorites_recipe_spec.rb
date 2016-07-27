@@ -6,7 +6,8 @@ require 'rails_helper'
 #
 # [X] Unauthenticated user does not see option to favorite recipe.
 # [X] Authenticated user sees option to favorite recipe.
-# [X] Authenticated user favorites recipe.
+# [X] Authenticated user favorites recipe from cookbook.
+# [] Authenticated user favorites recipe from web search
 # [X] Authenticated user sees list of favorites on profile page.
 # [X] Authenticated user removes recipe from list of favorites.
 

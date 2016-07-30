@@ -6,7 +6,7 @@ require 'rails_helper'
 #
 # [X] Unauthenticated user visits index, sees list of all recipes
 # [X] User clicks recipe name and is taken to recipe show page
-# [] Submitting user's information is visible in recipe
+# [X] Submitting user's information is visible in recipe
 
 feature "user goes to list of available recipes" do
   scenario "user sees list of recipes on index" do

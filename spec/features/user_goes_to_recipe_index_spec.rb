@@ -24,10 +24,9 @@ feature "user goes to list of available recipes" do
 
   scenario "user clicks recipe name and gets recipe details" do
     user = FactoryGirl.create(:user)
-    recipe = Recipe.create(name: "Pasta and Sauce",
-      ingredients: "Pasta and sauce", instructions: "Boil water, cook pasta,
-      and drain. Pour sauce from jar. Enjoy!", duration: "20 minutes",
-      user: user)
+    recipe = Recipe.create(name: "Pasta and Sauce", ingredients: "Pasta and
+    sauce", instructions: "Boil water, cook pasta, and drain. Pour sauce from
+    jar. Enjoy!", duration: "20 minutes", user: user)
 
     visit recipes_path
 

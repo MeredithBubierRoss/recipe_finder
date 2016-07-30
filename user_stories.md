@@ -81,6 +81,7 @@ And add a new recipe to my personal cookbook
 [X] User adds a new recipe to personal cookbook
 [X] User can favorite a recipe they like
 [X] User fills out form incorrectly, sees error messages
+[X] Submitting user's name is attached to recipe they added
 
 As a user
 I want to sign into my account

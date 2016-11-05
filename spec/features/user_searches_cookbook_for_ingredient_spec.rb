@@ -12,7 +12,7 @@ feature "user searches cookbook for recipes by ingredient" do
   scenario "user gets to cookbook from homepage" do
     visit root_path
 
-    click_link "cookbook"
+    click_link "users"
     expect(page.current_path).to eq recipes_path
   end
 

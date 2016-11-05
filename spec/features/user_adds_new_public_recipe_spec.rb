@@ -20,7 +20,7 @@ feature "authenticated user adds a new recipe" do
 
     visit root_path
 
-    click_link "cookbook"
+    click_link "users"
     # click_link "Add a new recipe"
 
     fill_in "Name", with: @recipe.name

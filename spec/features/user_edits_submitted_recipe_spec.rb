@@ -47,7 +47,7 @@ feature "user edits a recipe" do
     fill_in "Password", with: @user1.password
 
     click_button "Log in"
-    click_link "cookbook"
+    click_link "users"
     click_link @recipe2.name
 
     expect(page).to_not have_content "Edit"

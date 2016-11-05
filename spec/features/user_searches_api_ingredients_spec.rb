@@ -11,7 +11,7 @@ require 'rails_helper'
 feature "user searches api recipes by ingredient" do
   scenario "user searches recipes by ingredient", :vcr do
     visit root_path
-    click_link "something new"
+    click_link "internet"
 
     fill_in :query, with: "shrimp"
     click_button "Search"
@@ -20,7 +20,7 @@ feature "user searches api recipes by ingredient" do
 
   scenario "user clicks recipe name and gets recipe information", :vcr do
     visit root_path
-    click_link "something new"
+    click_link "internet"
 
     fill_in :query, with: "shrimp"
     click_button "Search"

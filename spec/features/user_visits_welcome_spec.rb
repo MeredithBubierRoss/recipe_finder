@@ -19,7 +19,7 @@ feature "user visits welcome page" do
   scenario "unauthenticated user chooses cookbook" do
     visit root_path
 
-    click_link "cookbook"
+    click_link "users"
 
     expect(page.current_path).to eq recipes_path
     expect(page).to have_content "The Cookbook"
@@ -31,7 +31,7 @@ feature "user visits welcome page" do
 
     visit root_path
 
-    click_link "cookbook"
+    click_link "users"
 
     expect(page.current_path).to eq recipes_path
     expect(page).to have_content "The Cookbook"
@@ -41,7 +41,7 @@ feature "user visits welcome page" do
     VCR.use_cassette('user goes to recipe search from welcome page') do
       visit root_path
 
-      click_link "something new"
+      click_link "internet"
 
       expect(page.current_path).to eq ingredients_path
       expect(page).to have_content "Recipe Search"
